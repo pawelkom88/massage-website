@@ -45,7 +45,11 @@ export default function Hero() {
               </p>
 
               <div className="mt-4">
-                <a href={process.env.GOOGLE_REVIEWS_LINK} target="_blank" rel="noopeneer">
+                <a
+                  className="cursor-pointer"
+                  href={process.env.NEXT_PUBLIC_GOOGLE_REVIEWS_LINK}
+                  target="_blank"
+                  rel="noreferrer ">
                   <span className="sr-only">Google reviews</span>
                   <GoogleIcon />
                 </a>
