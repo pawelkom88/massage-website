@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --primary-clr: #32584d;
-  --secondary-clr: #577a5d;
-  --teriary-clr: #252113;
+  /* --primary-clr: #32584d; */
+  --primary-clr: #C9C794;
+  --secondary-clr: #6a9983;
+  /* --teriary-clr: #2f4858; */
+  --teriary-clr: #2f4858;
   --accent-clr: #ffd7a8;
   --white-clr: ;
 }
@@ -30,7 +32,9 @@ body {
   color: var(--teriary-clr);
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-family: "Prata", serif;
 }
 

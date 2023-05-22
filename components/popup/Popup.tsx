@@ -2,13 +2,21 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import popupImg from "@/public/images/sport-massage-session.jpg";
+import { setItemInLocalStorage } from "@/helpers/helpers";
 
 export default function Popup() {
-  const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState<boolean>(false);
+
+  function closePopUp() {
+    setItemInLocalStorage("seenPopUp", "true");
+    setShowPopup(false);
+  }
 
   useEffect(() => {
+    let returningUser = localStorage.getItem("seenPopUp");
+
     setTimeout(() => {
-      setShowPopup(true);
+      setShowPopup(!returningUser);
     }, 10000);
   }, []);
 
@@ -16,14 +24,19 @@ export default function Popup() {
     <>
       {showPopup && (
         <>
-          <div className="fixed w-full h-full inset-0 bg-gray-400 opacity-60"></div>
-          <div className="fadeIn fixed inset-x-0 bottom-0 p-4">
+          <div
+            onClick={e => {
+              e.stopPropagation();
+              closePopUp();
+            }}
+            className="fixed w-full h-full inset-0 bg-gray-400 opacity-60 z-10"></div>
+          <div className="fadeIn fixed inset-x-0 bottom-0 p-4 z-20">
             <div className="relative max-w-xl rounded-lg bg-gray-50 p-6 shadow-sm">
               <button
-                onClick={() => setShowPopup(false)}
+                onClick={closePopUp}
                 type="button"
                 className="absolute -end-2 -top-2 rounded-full border border-gray-200 hover:border-gray-800 bg-white p-1 text-gray-800 hover:bg-gray-800 hover:text-white">
-                <span className="sr-only">Close</span>
+                <span className="sr-only">Close popup</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -48,7 +61,7 @@ export default function Popup() {
 
                 <div>
                   <h2 className="text-lg font-medium">
-                    Save yourself £5 off your next 60min treatment
+                    Save yourself £5 off your next 60min massage treatment
                   </h2>
 
                   <p className="mt-4 text-sm">
