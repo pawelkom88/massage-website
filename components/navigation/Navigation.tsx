@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/public/images/logo-edyta-james.png";
+import logo from "@/public/images/logo-muscle-mending.png";
 import Links from "../links/Links";
 import { linksLeft, linksRight } from "./data";
 
@@ -13,7 +13,7 @@ export default function Navigation() {
           href="/"
           aria-label="Back to homepage"
           className="flex items-center p-2">
-          <Image width={120} height={109} src={logo} alt="" className="w-[80px] lg:w-[120px]" />
+          <Image width={110} height={109} src={logo} alt="" className="w-[80px] lg:w-[110px]" />
         </a>
         <Links links={linksRight} />
       </div>

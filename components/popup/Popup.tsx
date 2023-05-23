@@ -73,7 +73,7 @@ export default function Popup() {
                       href={process.env.NEXT_PUBLIC_ADD_REVIEW_LINK}
                       target="_blank"
                       rel="noreferrer "
-                      className="inline-block rounded-lg bg-primary-clr hover:bg-secondary-clr px-5 py-3 text-sm font-medium text-white cursor-pointer">
+                      className="inline-block rounded-lg bg-primary-clr hover:bg-secondary-clr px-5 py-3 text-sm font-medium cursor-pointer">
                       Add review
                     </a>
                   </div>

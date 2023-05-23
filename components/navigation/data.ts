@@ -7,5 +7,5 @@ export const linksRight = [
 export const linksLeft = [
   { id: 1, name: "home", href: "/homepage" },
   { id: 2, name: "what to expect", href: "/what-to-expect-from-a-massage" },
-  { id: 3, name: "about-me", href: "/meet-the-massage-therapist" },
+  { id: 3, name: "about me", href: "/meet-the-massage-therapist" },
 ];
