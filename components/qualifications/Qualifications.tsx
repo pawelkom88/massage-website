@@ -6,7 +6,7 @@ import { qualificationsLeft, qualificationsRight } from "./data";
 export default function Qualifications() {
   return (
     <section>
-      <span className="mt-12 lg:mt-32 text-center text-primary-clr mb-2 block text-lg font-semibold">
+      <span className="mt-12 lg:mt-32 text-center text-secondary-clr mb-2 block text-lg font-semibold">
         Qualifications
       </span>
       <h2 className="text-center text-heading2 mt-4">My achievements as a massage therapist</h2>

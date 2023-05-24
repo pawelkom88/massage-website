@@ -65,3 +65,19 @@ h4 {
     opacity: 1;
   }
 }
+
+.light-primary-clr {
+  background-color: rgb(106, 153, 131, 0.04);
+}
+
+.testimonials::before {
+  content: "\201C";
+  position: absolute;
+  top: -5.5rem;
+  left: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 15rem;
+  color: var(--secondary-clr);
+  z-index: 9;
+  opacity: 0.06;
+}

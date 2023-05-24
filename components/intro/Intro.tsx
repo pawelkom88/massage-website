@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Intro() {
   return (
-    <section className="my-24 lg:mt-48 lg:mb-12 max-w-readable mx-auto px-4 lg:px-0 lg:text-lg">
-      <span className="text-primary-clr block font-semibold text-center">Recovery</span>
+    <section className="my-12 lg:my-24 lg:mt-48 lg:mb-12 max-w-readable mx-auto px-4 lg:px-0 lg:text-lg">
+      <span className="text-secondary-clr block font-semibold text-center">Recovery</span>
       <h2 className="text-heading2 text-center my-4 lg:my-8">Home Massage Studio in Newport City Center</h2>
       <br />
 

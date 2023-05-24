@@ -17,7 +17,6 @@ module.exports = {
       },
       colors: {
         "primary-clr": "var(--primary-clr)",
-        "primary-clr-opacity": "rgb(var(--primary-clr) / 0.8)",
         "secondary-clr": "var(--secondary-clr)",
         "accent-clr": "var(--accent-clr)",
         "text-dark": "var(--text-dark)",
@@ -27,3 +26,12 @@ module.exports = {
   },
   plugins: [],
 };
+
+function withOpacity(variableName) {
+  return ({ opacityValue }) => {
+    if (opacityValue !== undefined) {
+      return `rgba(var(${variableName}), ${opacityValue})`;
+    }
+    return `rgb(var(${variableName}))`;
+  };
+}

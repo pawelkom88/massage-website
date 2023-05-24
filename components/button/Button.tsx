@@ -15,7 +15,7 @@ interface ButtonProps {
 
 export const ButtonType: ButtonStyles = {
   primary:
-    "text-center bg-primary-clr hover:bg-secondary-clr border border-transparent text-base text-black font-medium rounded-md transition py-3 px-4",
+    "text-center bg-primary-clr hover:bg-transparent border border-2 border-primary-clr text-base text-black font-medium rounded-md transition py-3 px-4",
   secondary:
     "  text-center text-black bg-accent-clr hover:bg-transparent border-2 border-accent-clr text-base font-medium rounded-md transition py-3 px-4",
 };

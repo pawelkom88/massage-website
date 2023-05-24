@@ -5,7 +5,7 @@ import React from "react";
 export default function Pricing() {
   return (
     <section className="lg:text-lg">
-      <span className="text-primary-clr mb-4 block text-lg font-semibold text-center">
+      <span className="text-secondary-clr mb-4 block text-lg font-semibold text-center">
         The Key to a Healthier You
       </span>
       <h1 className="text-heading text-center my-4">Massage Pricing</h1>

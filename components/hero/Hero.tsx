@@ -35,8 +35,8 @@ export default function Hero() {
                 ))}
               </div>
 
-              <p className="mt-3 text-sm text-gray-800 dark:text-gray-200">
-                <span className="font-bold">4.9</span> / 5 - Don&apos;t just take our word for it.
+              <p className="mt-3 text-sm">
+                <span className="font-bold">4.9</span> / 5 - Don&apos;t just take my word for it.
                 See what our customers say
               </p>
 

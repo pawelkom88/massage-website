@@ -38,7 +38,7 @@ export default function About() {
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12 order-1 lg:order-2">
               <div className="mt-10 lg:mt-0">
-                <span className="text-primary-clr mb-2 block text-lg font-semibold text-center lg:text-left">
+                <span className="text-secondary-clr mb-2 block text-lg font-semibold text-center lg:text-left">
                   About me
                 </span>
                 <h2 className="mt-2 mb-4 text-heading2">Welcome! I&apos;m Edyta James</h2>
