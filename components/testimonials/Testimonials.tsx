@@ -3,12 +3,12 @@ import { testimonialData } from "./data";
 
 export default function Testimonials() {
   return (
-    <section className="bg-white">
-      <div className="mx-auto max-w-[85rem] px-4 py-16 sm:py-24">
+    <section className="bg-white mb-8">
+      <div className="mx-auto max-w-[85rem] px-4 py-8">
         <h2 className="text-center text-heading2 font-bold tracking-tight">
           Read trusted reviews from my customers
         </h2>
-        <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
+        <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
           {testimonialData.map(review => {
             return <Card key={review.id} name={review.name} content={review.content} />;
           })}
