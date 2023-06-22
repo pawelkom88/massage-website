@@ -5,26 +5,13 @@
 :root {
   /* --teriary-clr: #2f4858; */
   /* --primary-clr: #32584d; */
-  --primary-clr: #c9c794;
-  --secondary-clr: #6a9983;
-  --teriary-clr: #21333f;
-  --accent-clr: #ffca91;
+  --primary-clr: #ceb58a;
+  --secondary-clr: #8c734a;
+  --teriary-clr: #312f2d;
+  /* --accent-clr: #312f2d; */
   --white-clr: ;
 }
-
-/* #152100 */
-/* #001100 */
-
-/* #434939 */
-/* #a8ae9c */
-
-/* #1c2c00 */
-
-/* #ffcd93 */
-
-/* #ec975f */
-
-/* #b0632f */
+/* #f2f2ed */
 
 body {
   font-family: "DM Sans", serif;
@@ -40,7 +27,7 @@ h4 {
 }
 
 .underline-effect {
-  background-image: linear-gradient(120deg, #fff 0%, #ffd7a8 150%);
+  background-image: linear-gradient(120deg, #fff 0%, #ceb58a 150%);
   background-repeat: no-repeat;
   background-size: 100% 0.15em;
   background-position: 0 98%;

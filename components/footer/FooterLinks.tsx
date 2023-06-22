@@ -13,7 +13,7 @@ export default function FooterLinks() {
                 <li key={id}>
                   <Link
                     href={link}
-                    className="text-gray-500 text-sm transition hover:text-secondary-clr">
+                    className="text-white text-sm transition hover:text-secondary-clr">
                     {name}
                   </Link>
                 </li>
@@ -23,7 +23,7 @@ export default function FooterLinks() {
         </nav>
       </div>
       <br />
-      <small className="text-gray-500 text-center text-xs block">
+      <small className="text-gray-100 text-center text-xs block">
         © Copyright {currentYear} Muscle Mending. All rights reserved.
       </small>
     </div>

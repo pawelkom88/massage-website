@@ -19,6 +19,7 @@ module.exports = {
         "primary-clr": "var(--primary-clr)",
         "secondary-clr": "var(--secondary-clr)",
         "accent-clr": "var(--accent-clr)",
+        "teriary-clr": "var(--teriary-clr)",
         "text-dark": "var(--text-dark)",
         "text-light": "var(--text-light)",
       },

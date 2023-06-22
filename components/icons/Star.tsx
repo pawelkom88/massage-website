@@ -2,7 +2,7 @@ import React from "react";
 export default function Star({}) {
   return (
     <svg
-      className="h-4 w-4 text-accent-clr"
+      className="h-4 w-4 text-primary-clr"
       width="51"
       height="51"
       viewBox="0 0 51 51"

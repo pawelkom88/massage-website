@@ -11,7 +11,7 @@ export default function SocialMedia({}) {
               href={link.href}
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:opacity-75">
+              className="text-white transition hover:opacity-75">
               <span className="sr-only">{link.name}</span>
               <Image src={link.icon} alt={link.name} width={link.size} height={30} />
             </a>

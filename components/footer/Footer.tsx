@@ -3,7 +3,7 @@ import SocialMedia from "@/components/social-media/SocialMedia";
 
 export default function Footer() {
   return (
-    <footer className="light-primary-clr max-full px-4">
+    <footer className="bg-teriary-clr max-full px-4 text-white">
       <h2 className="text-heading2 text-center pt-12 pb-4">Get in touch</h2>
       <div className="max-w-[85rem] mx-auto lg:grid lg:grid-cols-4 lg:gap-12 place-items-center py-8">
         <div className="w-full block lg:col-span-2 h-96">
