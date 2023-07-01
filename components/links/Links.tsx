@@ -1,18 +1,19 @@
 import Link from "next/link";
-import { Link as LinkType } from "../navigation/types";
+import { LinksProps } from "../navigation/types";
+import DropDownMenu from "../navigation/drop-down-menu/DropDownMenu";
 
-export default function Links({ links }: { links: LinkType[] }) {
+export default function Links({ links, onShowDropDown, showDropDown }: LinksProps) {
   return (
     <ul className="items-stretch hidden space-x-3 md:flex capitalize text-lg">
-      {links.map(({ id, name, href }) => {
+      {links.map(({ id, name, href, hasDropDown }) => {
         return (
           <li key={id} className="flex">
             <Link
               href={href}
-              className="group flex items-center px-4 hover:text-secondary-clr transition">
-              <span className="bg-left-bottom bg-gradient-to-r from-primary-clr to-accent-clr bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                {name}
-              </span>
+              onClick={hasDropDown ? () => onShowDropDown(id) : () => onShowDropDown(0)}
+              className="text-[1rem] group flex items-center px-4 hover:text-secondary-clr transition hover:underline">
+              {name}
+              <DropDownMenu key={id} id={id} showDropDown={showDropDown} />
             </Link>
           </li>
         );
