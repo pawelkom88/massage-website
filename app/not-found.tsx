@@ -1,14 +1,17 @@
 import { ButtonType } from "@/components/button/Button";
 import Link from "next/link";
+// import { useRouter } from "next/router";
 import React from "react";
 
 export default function PageNotFound() {
+  // const router = useRouter()
   return (
     <section>
       <div className="container flex items-center min-h-screen px-6 py-12 mx-auto">
         <div className="flex flex-col items-center max-w-sm mx-auto text-center">
           <p className="p-3 text-sm font-medium text-blue-500 rounded-full bg-secondary-clr">
             <svg
+
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"

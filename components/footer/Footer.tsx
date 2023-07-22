@@ -21,12 +21,12 @@ export default function Footer() {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             <div className="space-y-2">
               <h3 className="text-heading3">Contact me</h3>
-              <a href="tel:07525431743" className="block font-medium  hover:text-secondary-clr">
+              <a href="tel:07525431743" className="block font-medium  hover:text-primary-clr">
                 07525431743
               </a>
               <a
                 href="mailto:esprofessionalmassage@gmail.com"
-                className="block font-medium  hover:text-secondary-clr">
+                className="block font-medium  hover:text-primary-clr">
                 esprofessionalmassage@gmail.com
               </a>
               <br />

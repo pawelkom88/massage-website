@@ -1,7 +1,10 @@
 import "./globals.css";
 import "@fontsource/work-sans";
-import "@fontsource/prata"
-import "@fontsource/dm-sans"
+import "@fontsource/prata";
+import "@fontsource/dm-sans";
+import Navigation from "@/components/navigation/Navigation";
+import Banner from "@/components/banner/Banner";
+import Footer from "@/components/footer/Footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +14,12 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Banner />
+        <Navigation />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

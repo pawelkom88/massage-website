@@ -6,20 +6,19 @@ import Intro from "@/components/intro/Intro";
 import Pricing from "@/components/pricing/Pricing";
 import Footer from "@/components/footer/Footer";
 import Testimonials from "@/components/testimonials/Testimonials";
+import Promotion from "@/components/promotion/Promotion";
 
 export default function Home() {
   return (
     <>
-      <Banner />
-      <Navigation />
       <Hero />
       <Popup />
       <main>
+        <Promotion />
         <Intro />
         {/* <Pricing /> */}
         <Testimonials />
       </main>
-      <Footer />
     </>
   );
 }

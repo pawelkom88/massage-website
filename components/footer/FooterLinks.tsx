@@ -4,7 +4,7 @@ import { footerLinks } from "./data";
 
 export default function FooterLinks() {
   return (
-    <div className="pt-4 mt-12 border-t border-secondary-clr">
+    <div className="pt-4 mt-12 border-t border-gray-50">
       <div className="flex sm:items-center justify-center">
         <nav>
           <ul className="flex flex-wrap gap-4">
@@ -24,7 +24,7 @@ export default function FooterLinks() {
       </div>
       <br />
       <small className="text-gray-100 text-center text-xs block">
-        © Copyright {currentYear} Muscle Mending. All rights reserved.
+        © Copyright {currentYear} Healthy Mending. All rights reserved.
       </small>
     </div>
   );

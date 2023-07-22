@@ -11,5 +11,6 @@ export interface DropDownProps {
 }
 
 export interface LinksProps extends DropDownProps {
+  numberDropDownOfLinks: number;
   links: Link[];
 }

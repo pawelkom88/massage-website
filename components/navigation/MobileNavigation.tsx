@@ -9,7 +9,7 @@ export default function MobileNavigation() {
         onClick={() => setToggleMenu(!toggleMenu)}
         title="Button"
         type="button"
-        className="p-4 md:hidden">
+        className="p-4 lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
