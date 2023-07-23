@@ -4,7 +4,7 @@ import useDropdownMenu from "react-accessible-dropdown-menu-hook";
 import DropDownLinks from "../drop-down-menu/DropDownLinks";
 
 const className =
-  "text-[1rem] group flex items-center hover:text-secondary-clr transition hover:underline";
+  "text-[1rem] group flex items-center hover:text-primary-clr transition hover:underline";
 
 export default function Links({ links, numberDropDownOfLinks }: LinksProps) {
   const {

@@ -5,7 +5,6 @@ import Image from "next/image";
 import logo from "@/public/images/logo-healthy-muscles.webp";
 import Links from "./links/Links";
 import { linksLeft, linksRight } from "./data";
-import MobileNavigation from "./MobileNavigation";
 import Link from "next/link";
 import { subLinks1, subLinks2 } from "./drop-down-menu/DropDownLinks";
 
@@ -36,7 +35,6 @@ export default function Navigation() {
           showDropDown={showDropDown}
           onShowDropDown={setShowDropDown}
         />
-        {/* <MobileNavigation /> */}
       </div>
     </header>
   );

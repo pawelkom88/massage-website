@@ -14,6 +14,11 @@ export const subLinks2: SubLink[] = [
     name: "Aftercare advice",
     href: `/${generateLinkFromName("Aftercare advice")}`,
   },
+  {
+    id: 2,
+    name: "Before and during treatment",
+    href: `/${generateLinkFromName("Before and during treatment")}`,
+  },
 ];
 
 export default function DropDownLinks({ itemProps, id }: { itemProps: any; id: number }) {
@@ -41,7 +46,7 @@ export default function DropDownLinks({ itemProps, id }: { itemProps: any; id: n
         {subLinks.map(({ id, href, name }, index) => {
           return (
             <Link
-              className="hover:text-primary-clr hover:underline"
+              className="text-secondary-clr hover:text-primary-clr hover:underline"
               key={id}
               {...itemProps[index]}
               href={href}>
