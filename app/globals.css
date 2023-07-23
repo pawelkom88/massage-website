@@ -3,12 +3,11 @@
 @tailwind utilities;
 
 :root {
-  /* --teriary-clr: #2f4858; */
-  /* --primary-clr: #32584d; */
-  --primary-clr: #ceb58a;
+
+  --primary-clr: #E4B48E;
   --secondary-clr: #8c734a;
-  --teriary-clr: #312f2d;
-  /* --accent-clr: #312f2d; */
+  --teriary-clr: #2F3E46;
+  --accent-clr: #F0DDCA
   --white-clr: ;
 }
 /* #f2f2ed */

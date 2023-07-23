@@ -32,7 +32,7 @@ export default function AboutMe() {
           </div>
 
           <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-            <div className="mt-10 lg:mt-0">
+            <div className="mt-4 lg:mt-0">
               <span className="text-secondary-clr mb-2 block text-lg font-semibold text-center lg:text-left">
                 About me
               </span>

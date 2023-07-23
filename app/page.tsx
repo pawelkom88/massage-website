@@ -15,7 +15,7 @@ export default function Home() {
       <Popup />
       <main>
         <Promotion />
-        <Intro />
+        {/* <Intro /> */}
         {/* <Pricing /> */}
         <Testimonials />
       </main>
