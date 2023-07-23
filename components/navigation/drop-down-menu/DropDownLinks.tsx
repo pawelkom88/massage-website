@@ -21,7 +21,15 @@ export const subLinks2: SubLink[] = [
   },
 ];
 
-export default function DropDownLinks({ itemProps, id }: { itemProps: any; id: number }) {
+export default function DropDownLinks({
+  itemProps,
+  id,
+  onShowDropDown,
+}: {
+  itemProps: any;
+  id: number;
+  onShowDropDown: (val: boolean) => void;
+}) {
   let subLinks: SubLink[] = [];
 
   switch (id) {
@@ -36,8 +44,8 @@ export default function DropDownLinks({ itemProps, id }: { itemProps: any; id: n
 
   return (
     <div
-      className={`absolute ${id === 1 ? "w-[20rem]" : "w-[14rem]"} z-20 top-12 ${
-        id === 1 ? "left-[-7rem]" : "right-[-3rem]"
+      className={`absolute w-[20rem] z-20 top-12 ${
+        id === 1 ? "left-[-7rem]" : "right-[-7rem]"
       } mt-2 text-center shadow-lg`}
       role="menu">
       <div
@@ -46,6 +54,7 @@ export default function DropDownLinks({ itemProps, id }: { itemProps: any; id: n
         {subLinks.map(({ id, href, name }, index) => {
           return (
             <Link
+              onClick={() => onShowDropDown(false)}
               className="text-secondary-clr hover:text-primary-clr hover:underline"
               key={id}
               {...itemProps[index]}

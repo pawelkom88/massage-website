@@ -22,8 +22,9 @@ export default function Hero() {
             {/* <span className="text-secondary-clr underline-effect">massage therapy</span> in Newport */}
           </h1>
           <p className="mt-3 lg:text-lg px-4">
-            Whether you need a sports massage to enhance your performance, remedial treatment when
-            you are stuck at a desk all day or relaxation massage to soothe your stress, look no
+            Whether you need a <span className="font-bold">sports massage</span> to enhance your
+            performance, remedial treatment when you are stuck at a desk all day or{" "}
+            <span className="font-bold">relaxation massage</span> to soothe your stress, look no
             further. I offer high-quality and customised massages that will restore balance and
             health to your muscles. Relax and let me take care of you.
           </p>

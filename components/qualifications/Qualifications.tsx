@@ -2,8 +2,9 @@ import Image from "next/image";
 import React from "react";
 import certificate from "@/public/images/certificate4.webp";
 import insurance from "@/public/images/babtac-logo.png";
-import { qualificationsLeft, qualificationsRight } from "./data";
+import { courses, qualificationsLeft, qualificationsRight } from "./data";
 import Others from "./Others";
+import QualificationsIcon from "@/public/icons/QualificationsIcon";
 
 export default function Qualifications() {
   return (
@@ -71,11 +72,21 @@ export default function Qualifications() {
           </div>
         </div>
       </div>
-      <Others />
+      <Others data={courses} icon={<QualificationsIcon />} />
       <br />
-      <Image className="mx-auto" src={insurance} width={200} height={150} alt='BABTAC insurance logo'/>
+      <Image
+        className="mx-auto"
+        src={insurance}
+        width={200}
+        height={150}
+        alt="BABTAC insurance logo"
+      />
       <br />
-      <p>Valid insurance accredited by BABTAC ensures that the insurance coverage meets the standards and requirements set by the British Association of Beauty Therapy and Cosmetology, offering peace of mind and confidence to practitioners in the beauty and cosmetology industry.</p>
+      <p>
+        Valid insurance accredited by BABTAC ensures that the insurance coverage meets the standards
+        and requirements set by the British Association of Beauty Therapy and Cosmetology, offering
+        peace of mind and confidence to practitioners in the beauty and cosmetology industry.
+      </p>
     </section>
   );
 }

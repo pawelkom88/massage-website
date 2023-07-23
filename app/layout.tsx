@@ -5,6 +5,7 @@ import "@fontsource/dm-sans";
 import Navigation from "@/components/navigation/Navigation";
 import Banner from "@/components/banner/Banner";
 import Footer from "@/components/footer/Footer";
+import MobileNavigation from "@/components/navigation/MobileNavigation";
 
 export const metadata = {
   title: "Create Next App",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Banner />
         <Navigation />
+        <MobileNavigation />
         {children}
         <Footer />
       </body>
