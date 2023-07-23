@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useWindowSize } from "@/hooks/useWindowSize";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/images/logo-edyta-james.webp";
+import logo from "@/public/images/logo-healthy-muscles.svg";
 import logo2 from "@/public/images/EJ_MSG_SLATE.svg";
 import { linksLeft, linksRight } from "./data";
 import { subLinks1, subLinks2 } from "./drop-down-menu/DropDownLinks";
@@ -142,7 +142,7 @@ const MobileNavigation: React.FC = () => {
         <>
           <div className={`${menuStyles} z-50`}>
             <Image
-              className="absolute top-0 z-50"
+              className="absolute top-0 z-50 p-4"
               src={logo}
               width={logo.width}
               height={logo.width}
@@ -163,7 +163,7 @@ const MobileNavigation: React.FC = () => {
               />
             )}
             <Image
-              className="absolute w-3/4 mx-auto bottom-36 z-50"
+              className="absolute w-3/4 mx-auto bottom-[15vh] z-50"
               src={logo2}
               width={logo2.width}
               height={logo2.width}

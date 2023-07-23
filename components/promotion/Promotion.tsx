@@ -1,6 +1,4 @@
 import CallToAction from "../cta/CallToAction";
-import GoogleIcon from "../icons/GoogleIcon";
-import Star from "../icons/Star";
 
 const Promotion = () => {
   return (

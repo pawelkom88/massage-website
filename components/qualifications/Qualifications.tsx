@@ -3,7 +3,6 @@ import React from "react";
 import insurance from "@/public/images/babtac-logo.png";
 import { courses } from "./data";
 import Others from "./Others";
-import QualificationsIcon from "@/public/icons/QualificationsIcon";
 
 export default function Qualifications() {
   return (
@@ -73,7 +72,6 @@ export default function Qualifications() {
       <Others
         styles={{ margin: "0 auto", marginTop: "-4rem" }}
         data={courses}
-        icon={<QualificationsIcon />}
       />
       <br />
       <Image
@@ -84,7 +82,7 @@ export default function Qualifications() {
         alt="BABTAC insurance logo"
       />
       <br />
-      <p>Valid insurance accredited by BABTAC.</p>
+      <p className="text-center">Valid insurance accredited by BABTAC.</p>
     </section>
   );
 }

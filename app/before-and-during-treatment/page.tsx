@@ -10,17 +10,17 @@ const BeforeAndDuringTreatment = () => {
         hasHeading="What to expect after massage?"
         title="Before and during treatment"
         data={massageExpectations}
-        styles={{ width: "100%", textIndent: "1rem" }}
+        styles={{ width: "100%", listStyle: "none" }}
       />
       <Others
         hasHeading="Diet advice after treatment:"
         data={dietAdvice}
-        styles={{ width: "100%", textIndent: "1rem" }}
+        styles={{ width: "100%", listStyle: "none" }}
       />
       <Others
         hasHeading="What to expect after massage?"
         data={lifestyleAdvice}
-        styles={{ width: "100%", textIndent: "1rem" }}
+        styles={{ width: "100%", listStyle: "none" }}
       />
     </section>
   );

@@ -37,7 +37,7 @@ export default function Hero() {
             <a className="hidden lg:block font-bold" href="tel:07525431743">
               07525431743
             </a>
-            .
+            
           </p>
           <br />
           <div className="grid gap-3 w-full sm:inline-flex px-4">

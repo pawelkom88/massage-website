@@ -8,9 +8,7 @@
   --secondary-clr: #8c734a;
   --teriary-clr: #2F3E46;
   --accent-clr: #F0DDCA
-  --white-clr: ;
 }
-/* #f2f2ed */
 
 body {
   font-family: "DM Sans", serif;
@@ -26,7 +24,7 @@ h4 {
 }
 
 .underline-effect {
-  background-image: linear-gradient(120deg, #fff 0%, #ceb58a 150%);
+  background-image: linear-gradient(120deg, #fff 0%, #E4B48E 150%);
   background-repeat: no-repeat;
   background-size: 100% 0.15em;
   background-position: 0 98%;

@@ -15,32 +15,28 @@ interface OthersProps {
 
 interface CourseItemProps {
   children: ReactNode;
-  icon: JSX.Element;
 }
 
-const CourseItem = ({ children, icon }: CourseItemProps) => (
-  <>
-    <dt className="w-full text-lg font-medium flex items-center gap-4">
-      {icon}
-      <span>{children}</span>
-    </dt>
-  </>
+const CourseItem = ({ children }: CourseItemProps) => (
+  <li className="w-full text-lg font-medium gap-4 list-item">{children}</li>
 );
 
-const Others = ({ data, icon, styles, title = "", hasHeading = "" }: OthersProps) => {
+const Others = ({ data, styles, title = "", hasHeading = "" }: OthersProps) => {
   return (
     <div className="w-full mx-auto my-12">
       <h2 className="text-center text-heading2 mt-4">{title}</h2>
       <br />
       <br />
-      <dl style={styles} className="lg:w-1/2 -my-3 space-y-3">
+      <div style={styles} className="lg:w-1/2 -my-3 space-y-3">
         <h3 className="text-xl text-center">{hasHeading}</h3>
-        {data.map(({ id, title }) => (
-          <CourseItem icon={icon || <div />} key={id}>
-            {title}
-          </CourseItem>
-        ))}
-      </dl>
+        <ul style={styles} className="list-disc">
+          {data.map(({ id, title }) => (
+            <CourseItem key={id}>
+              {title}
+            </CourseItem>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
