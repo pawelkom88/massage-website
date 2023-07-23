@@ -5,7 +5,7 @@ import DashIcon from "@/public/icons/DashIcon";
 
 const BenefitsOfMassage = () => {
   return (
-    <section className="px-4 max-w-readable mx-auto">
+    <section className="px-4 max-w-readable mx-auto uppercase">
       <Others
         title="Benefits of Massage"
         data={benefits}

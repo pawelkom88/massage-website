@@ -6,6 +6,7 @@ import { useWindowSize } from "@/hooks/useWindowSize";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/images/logo-edyta-james.webp";
+import logo2 from "@/public/images/EJ_MSG_SLATE.svg";
 import { linksLeft, linksRight } from "./data";
 import { subLinks1, subLinks2 } from "./drop-down-menu/DropDownLinks";
 import { SubLink } from "./drop-down-menu/data";
@@ -105,17 +106,17 @@ const MobileNavigation: React.FC = () => {
       {isElementVisible && (
         <>
           <button
-            onClick={() => setToggleMenu(true)}
+            onClick={() => setToggleMenu(!toggleMenu)}
             type="button"
             aria-label="Open Menu"
             aria-controls="menuItems"
             aria-expanded={toggleMenu ? "true" : "false"}
             title="Open Menu"
-            className={`fixed bottom-0 left-1/2 z-50 -translate-x-1/2 -translate-y-1/2 flex h-16 w-16 flex-col items-center justify-center rounded-full pt-2 z-90
+            className={`fixed bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-16 w-16 flex-col items-center justify-center rounded-full pt-2 z-[100]
                 ${isElementVisibleBottom ? "bg-primary-clr" : "bg-teriary-clr"}`}>
             <div
               className={`${genericHamburgerLine} ${
-                toggleMenu && "translate-y-[9px] rotate-45 opacity-100"
+                toggleMenu && "translate-y-[8.5px] rotate-45 opacity-100"
               }`}
             />
             <div
@@ -135,14 +136,14 @@ const MobileNavigation: React.FC = () => {
 
       {toggleMenu && (
         <>
-          <Image
-            className="absolute top-0 z-50"
-            src={logo}
-            width={logo.width}
-            height={logo.width}
-            alt="healthy-muscles-logo"
-          />
           <div className={`${menuStyles} z-50`}>
+            <Image
+              className="absolute top-0 z-50"
+              src={logo}
+              width={logo.width}
+              height={logo.width}
+              alt="healthy-muscles-logo"
+            />
             <MenuList
               links={[...linksLeft, ...linksRight]}
               currentRoute={currentRoute}
@@ -157,6 +158,13 @@ const MobileNavigation: React.FC = () => {
                 setSubPage={setSubPage}
               />
             )}
+               <Image
+              className="absolute w-3/4 mx-auto bottom-36 z-50"
+              src={logo2}
+              width={logo2.width}
+              height={logo2.width}
+              alt="healthy-muscles-logo-secondary"
+            />
           </div>
         </>
       )}
