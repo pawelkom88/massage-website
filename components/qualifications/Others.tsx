@@ -10,24 +10,33 @@ interface OthersProps {
   icon?: JSX.Element;
   styles?: CSSProperties;
   title?: string;
+  hasHeading?: string;
 }
 
-const CourseItem = ({ children, icon }: { children: ReactNode; icon?: JSX.Element }) => (
-  <dt className="w-full text-lg font-medium flex items-center gap-2">
-    {icon}
-    {children}
-  </dt>
+interface CourseItemProps {
+  children: ReactNode;
+  icon: JSX.Element;
+}
+
+const CourseItem = ({ children, icon }: CourseItemProps) => (
+  <>
+    <dt className="w-full text-lg font-medium flex items-center gap-4">
+      {icon}
+      <span>{children}</span>
+    </dt>
+  </>
 );
 
-const Others = ({ data, icon, styles, title = "Other" }: OthersProps) => {
+const Others = ({ data, icon, styles, title = "", hasHeading = "" }: OthersProps) => {
   return (
-    <div className="max-w-7xl mx-auto my-12">
+    <div className="w-full mx-auto my-12">
       <h2 className="text-center text-heading2 mt-4">{title}</h2>
       <br />
       <br />
       <dl style={styles} className="lg:w-1/2 -my-3 space-y-3">
+        <h3 className="text-xl text-center">{hasHeading}</h3>
         {data.map(({ id, title }) => (
-          <CourseItem icon={icon} key={id}>
+          <CourseItem icon={icon || <div />} key={id}>
             {title}
           </CourseItem>
         ))}

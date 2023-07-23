@@ -12,6 +12,8 @@ export default function Hero() {
         <Image
           width={massageRoomImg.width}
           height={massageRoomImg.height}
+          blurDataURL={massageRoomImg.blurDataURL}
+          placeholder="blur"
           className="w-full lg:h-5/6 object-cover lg:order-2 lg:rounded-lg lg:shadow-xl place-self-center"
           src={massageRoomImg}
           alt="Massage bed in a room full of candles and relaxing atmosphere"
@@ -29,14 +31,23 @@ export default function Hero() {
             health to your muscles. Relax and let me take care of you.
           </p>
           <br />
+          <p className="mt-3 lg:text-lg px-4">
+            Thank you very much for visiting my website, hope you find all the information you need,
+            if not don&apos;t hesitate to give me a call on my mobile{" "}
+            <a className="hidden lg:block font-bold" href="tel:07525431743">
+              07525431743
+            </a>
+            .
+          </p>
+          <br />
           <div className="grid gap-3 w-full sm:inline-flex px-4">
-            <CallToAction>Book a massage now</CallToAction>
-            <Button
+            <CallToAction>Call to book</CallToAction>
+            {/* <Button
               href="/treatments/sport-remedial-and-injury-rehabilitation-massage"
               isButton={false}
               type="secondary">
               Find out more about my offer
-            </Button>
+            </Button> */}
           </div>
           <div className="mt-6 lg:mt-10 grid grid-cols-2 gap-x-5 px-4">
             <div className="py-5">

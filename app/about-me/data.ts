@@ -17,6 +17,6 @@ export const aboutMe: AboutMe[] = [
   {
     id: 3,
     content:
-      "My adventure with massage started in 2009 and I can easily say that massage has changed my life. I feel very blessed to have a career that I love along with the opportunities to help people. Whilst I specialise in Sports Massage and Injury Rehabilitation, I also practise Myofascial Cupping, Swedish Relaxing Massage, Hot Stone Therapy and Indian Head Massage. All of my qualifications and years of experience have given me a lot of knowledge and the confidence to massage away all those aches, pains and everyday stress we all have. What inspires me about my work is that no session is ever the same. We’re all structurally the same, but each body has a very different story to tell, it’s fascinating!",
+      "My adventure with massage started in 2009 and I can easily say that massage has changed my life. I feel very blessed to have a career that I love along with the opportunities to help people. Whilst I specialise in Sports Massage and Injury Rehabilitation, I also practise Myofascial Cupping, Swedish Relaxing Massage, Hot Stone Therapy and Indian Head Massage. All of my qualifications and years of experience have given me a lot of knowledge and the confidence to massage away all those aches, pains and everyday stress we all have. What inspires me about my work is that no session is ever the same. We're all structurally the same, but each body has a very different story to tell, it's fascinating!",
   },
 ];

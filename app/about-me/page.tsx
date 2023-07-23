@@ -16,22 +16,15 @@ export default function AboutMe() {
                 width={massage1.width}
                 height={massage1.height}
                 src={massage1}
-                alt=""
+                blurDataURL={massage1.blurDataURL}
+                placeholder="blur"
+                alt="Edyta performing massage"
                 className="w-full rounded-2xl"
               />
             </div>
-            {/* <div className="py-3 sm:py-4">
-              <Image
-                width={massage2.width}
-                height={massage2.height}
-                src={massage2}
-                alt=""
-                className="w-full rounded-2xl"
-              />
-            </div> */}
           </div>
 
-          <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
+          <div className="w-full px-4 xl:w-5/12">
             <div className="mt-4 lg:mt-0">
               <span className="text-secondary-clr mb-2 block text-lg font-semibold text-center lg:text-left">
                 About me

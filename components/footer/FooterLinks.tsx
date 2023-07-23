@@ -24,7 +24,7 @@ export default function FooterLinks() {
       </div>
       <br />
       <small className="text-gray-100 text-center text-xs block">
-        © Copyright {currentYear} Healthy Mending. All rights reserved.
+        © Copyright {currentYear} Healthy Muscles. All rights reserved.
       </small>
     </div>
   );

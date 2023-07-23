@@ -1,8 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import certificate from "@/public/images/certificate4.webp";
 import insurance from "@/public/images/babtac-logo.png";
-import { courses, qualificationsLeft, qualificationsRight } from "./data";
+import { courses } from "./data";
 import Others from "./Others";
 import QualificationsIcon from "@/public/icons/QualificationsIcon";
 
@@ -13,13 +12,12 @@ export default function Qualifications() {
         Qualifications
       </span>
       <h2 className="text-center text-heading2 mt-4">My achievements as a massage therapist</h2>
-      <div className="relative items-center w-full lg:py-8 mx-auto max-w-7xl">
-        <div className="grid items-center grid-cols-1 gap-4 text-left  lg:grid-cols-3">
-          <div className="relative items-center gap-12 m-auto lg:inline-flex md:order-first">
+      {/* <div className="relative items-center w-full lg:py-8 mx-auto max-w-7xl"> */}
+      {/* <div className="grid items-center grid-cols-1 gap-4 text-left  lg:grid-cols-3"> */}
+      {/* <div className="relative items-center gap-12 m-auto lg:inline-flex md:order-first">
             <ul
               role="list"
               className="grid md:grid-cols-2 gap-4 list-none grid-cols-1 lg:grid-cols-1 lg:gap-6">
-              {/* slider */}
               {qualificationsLeft.map(({ id, content, image }) => {
                 return (
                   <li key={id} className="text-center">
@@ -35,8 +33,8 @@ export default function Qualifications() {
                 );
               })}
             </ul>
-          </div>
-          <div className="mx-auto block order-first lg:w-full mt-12 object-cover lg:mt-0 lg:mb-0">
+          </div> */}
+      {/* <div className="mx-auto block order-first lg:w-full mt-12 object-cover lg:mt-0 lg:mb-0">
             <p className="mt-5 text-lg font-medium leading-6 mb-4 text-center">
               Member of BABTAC - British Association of Beauty Therapy and Cosmetology
             </p>
@@ -47,8 +45,8 @@ export default function Qualifications() {
               className="object-cover object-center lg:w-full lg:h-full mx-auto lg:ml-auto rounded shadow-xl mt-4 w-3/4 h-5/6"
               alt="certificate"
             />
-          </div>
-          <div className="relative items-center gap-12 m-auto lg:inline-flex md:order-first">
+          </div> */}
+      {/* <div className="relative items-center gap-12 m-auto lg:inline-flex md:order-first">
             <div className="mx-auto lg:max-w-7xl">
               <ul
                 role="list"
@@ -69,10 +67,14 @@ export default function Qualifications() {
                 })}
               </ul>
             </div>
-          </div>
-        </div>
-      </div>
-      <Others data={courses} icon={<QualificationsIcon />} />
+          </div> */}
+      {/* </div> */}
+      {/* </div> */}
+      <Others
+        styles={{ margin: "0 auto", marginTop: "-4rem" }}
+        data={courses}
+        icon={<QualificationsIcon />}
+      />
       <br />
       <Image
         className="mx-auto"
@@ -82,11 +84,7 @@ export default function Qualifications() {
         alt="BABTAC insurance logo"
       />
       <br />
-      <p>
-        Valid insurance accredited by BABTAC ensures that the insurance coverage meets the standards
-        and requirements set by the British Association of Beauty Therapy and Cosmetology, offering
-        peace of mind and confidence to practitioners in the beauty and cosmetology industry.
-      </p>
+      <p>Valid insurance accredited by BABTAC.</p>
     </section>
   );
 }

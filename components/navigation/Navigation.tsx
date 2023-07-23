@@ -25,7 +25,7 @@ export default function Navigation() {
             width={800}
             height={300}
             src={logo}
-            alt="healthy mending logo"
+            alt="healthy muscle logo"
             className="w-[250px]"
           />
         </Link>

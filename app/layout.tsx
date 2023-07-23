@@ -3,7 +3,6 @@ import "@fontsource/work-sans";
 import "@fontsource/prata";
 import "@fontsource/dm-sans";
 import Navigation from "@/components/navigation/Navigation";
-import Banner from "@/components/banner/Banner";
 import Footer from "@/components/footer/Footer";
 import MobileNavigation from "@/components/navigation/MobileNavigation";
 
@@ -16,7 +15,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <Banner />
         <Navigation />
         <MobileNavigation />
         {children}

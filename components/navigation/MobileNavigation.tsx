@@ -10,6 +10,7 @@ import logo2 from "@/public/images/EJ_MSG_SLATE.svg";
 import { linksLeft, linksRight } from "./data";
 import { subLinks1, subLinks2 } from "./drop-down-menu/DropDownLinks";
 import { SubLink } from "./drop-down-menu/data";
+import GoBackIcon from "@/public/icons/GoBackIcon";
 
 const genericHamburgerLine = `h-[3px] w-8 my-[2px] bg-white transition ease transform duration-300`;
 const menuStyles =
@@ -63,7 +64,7 @@ interface SubMenuProps {
 
 const SubMenu: React.FC<SubMenuProps> = ({ subLinks, currentRoute, setToggleMenu, setSubPage }) => {
   return (
-    <ul className={`${menuStyles} z-60 text-center space-y-4 uppercase text-xl p-4`}>
+    <ul className={`${menuStyles} z-60 text-center space-y-6 uppercase text-xl p-4`}>
       {subLinks.map(link => (
         <li key={link.id}>
           <Link
@@ -78,7 +79,10 @@ const SubMenu: React.FC<SubMenuProps> = ({ subLinks, currentRoute, setToggleMenu
           </Link>
         </li>
       ))}
-      <button onClick={() => setSubPage(null)}>back</button>
+      <br />
+      <button className="w-8 h-8" onClick={() => setSubPage(null)}>
+        <GoBackIcon />
+      </button>
     </ul>
   );
 };
@@ -158,7 +162,7 @@ const MobileNavigation: React.FC = () => {
                 setSubPage={setSubPage}
               />
             )}
-               <Image
+            <Image
               className="absolute w-3/4 mx-auto bottom-36 z-50"
               src={logo2}
               width={logo2.width}

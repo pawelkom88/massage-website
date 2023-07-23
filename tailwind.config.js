@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        heading: "clamp(1.8rem, 0.8rem + 2vw, 5rem);",
+        heading: "clamp(1.8rem, 0.5rem + 2vw, 4.5rem);",
         heading2: "clamp(1.5rem, 0.5rem + 1.5vw, 3rem);",
         heading3: "clamp(1.2rem, 0.3rem + 1.2vw, 2.7rem);",
       },

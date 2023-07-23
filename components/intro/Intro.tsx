@@ -16,7 +16,9 @@ export default function Intro() {
         src={massageRoomImg}
         width={massageRoomImg.width}
         height={massageRoomImg.height}
-        alt="Massage Room"
+        blurDataURL={massageRoomImg.blurDataURL}
+        placeholder="blur"
+        alt="Edyta's Massage Room"
         className="rounded-lg shadow-lg aspect-video"
       />
 

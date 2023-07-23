@@ -25,9 +25,9 @@ export default function Footer() {
                 07525431743
               </a>
               <a
-                href="mailto:esprofessionalmassage@gmail.com"
+                href="mailto:info@healthymuscles.co.uk"
                 className="block font-medium  hover:text-primary-clr">
-                esprofessionalmassage@gmail.com
+                info@healthymuscles.co.uk
               </a>
               <br />
               <SocialMedia />
