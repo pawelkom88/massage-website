@@ -64,7 +64,7 @@ interface SubMenuProps {
 
 const SubMenu: React.FC<SubMenuProps> = ({ subLinks, currentRoute, setToggleMenu, setSubPage }) => {
   return (
-    <ul className={`${menuStyles} z-60 text-center space-y-6 uppercase text-xl p-4`}>
+    <ul className={`${menuStyles} z-60 text-center space-y-3 uppercase text-lg p-4`}>
       {subLinks.map(link => (
         <li key={link.id}>
           <Link
@@ -91,7 +91,7 @@ const MobileNavigation: React.FC = () => {
   const currentRoute = usePathname();
   const [toggleMenu, setToggleMenu] = useState(false);
   const [showSubPage, setSubPage] = useState<null | number>(null);
-  const isElementVisible = useWindowSize(0.3);
+  // const isElementVisible = useWindowSize(0.3);
   const isElementVisibleBottom = useWindowSize(0.75);
 
   let subLinks: SubLink[] = [];
@@ -107,36 +107,32 @@ const MobileNavigation: React.FC = () => {
 
   return (
     <div className="lg:hidden">
-      {isElementVisible && (
-        <>
-          <button
-            onClick={() => setToggleMenu(!toggleMenu)}
-            type="button"
-            aria-label="Open Menu"
-            aria-controls="menuItems"
-            aria-expanded={toggleMenu ? "true" : "false"}
-            title="Open Menu"
-            className={`fixed bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-16 w-16 flex-col items-center justify-center rounded-full pt-2 z-[100]
+      <button
+        onClick={() => setToggleMenu(!toggleMenu)}
+        type="button"
+        aria-label="Open Menu"
+        aria-controls="menuItems"
+        aria-expanded={toggleMenu ? "true" : "false"}
+        title="Open Menu"
+        className={`fixed bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-16 w-16 flex-col items-center justify-center rounded-full pt-2 z-[100]
                 ${isElementVisibleBottom ? "bg-primary-clr" : "bg-teriary-clr"}`}>
-            <div
-              className={`${genericHamburgerLine} ${
-                toggleMenu && "translate-y-[8.5px] rotate-45 opacity-100"
-              }`}
-            />
-            <div
-              className={`${genericHamburgerLine} ${
-                toggleMenu && "-translate-y-[-1px] -rotate-45 opacity-100"
-              }`}
-            />
-            <small
-              className={`${
-                toggleMenu ? "opacity-0" : "opacity-100"
-              } text-white transition-opacity duration-200 ease-in-out`}>
-              menu
-            </small>
-          </button>
-        </>
-      )}
+        <div
+          className={`${genericHamburgerLine} ${
+            toggleMenu && "translate-y-[8.5px] rotate-45 opacity-100"
+          }`}
+        />
+        <div
+          className={`${genericHamburgerLine} ${
+            toggleMenu && "-translate-y-[-1px] -rotate-45 opacity-100"
+          }`}
+        />
+        <small
+          className={`${
+            toggleMenu ? "opacity-0" : "opacity-100"
+          } text-white transition-opacity duration-200 ease-in-out`}>
+          menu
+        </small>
+      </button>
 
       {toggleMenu && (
         <>

@@ -16,8 +16,8 @@ export const subLinks2: SubLink[] = [
   },
   {
     id: 2,
-    name: "Before and during treatment",
-    href: `/${generateLinkFromName("Before and during treatment")}`,
+    name: "During the treatment",
+    href: `/${generateLinkFromName("During the treatment")}`,
   },
 ];
 

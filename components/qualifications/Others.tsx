@@ -23,7 +23,7 @@ const CourseItem = ({ children }: CourseItemProps) => (
 
 const Others = ({ data, styles, title = "", hasHeading = "" }: OthersProps) => {
   return (
-    <div className="w-full mx-auto my-12">
+    <div className="w-full mx-auto my-12 px-4">
       <h2 className="text-center text-heading2 mt-4">{title}</h2>
       <br />
       <br />
