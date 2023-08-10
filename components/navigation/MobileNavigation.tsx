@@ -30,7 +30,7 @@ interface MenuProps {
 
 const MenuList: React.FC<MenuProps> = ({ links, currentRoute, setToggleMenu, setSubPage }) => {
   return (
-    <ul className="text-center space-y-4 uppercase text-xl">
+    <ul className="text-center space-y-4 uppercase text-lg">
       {links.map(link => (
         <Fragment key={link.id}>
           {link.hasDropDown ? (

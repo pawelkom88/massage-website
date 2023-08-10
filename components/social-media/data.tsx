@@ -31,6 +31,6 @@ export const socialMediaLinks: SocialMedia[] = [
     name: "FreeIndex",
     href: "http://www.freeindex.co.uk/,profile%28professional-massage-therapy-by-edyta-szabaciuk%29_612728.htm",
     icon: freeIndexLogo,
-    size: 55,
+    size: 25,
   },
 ];

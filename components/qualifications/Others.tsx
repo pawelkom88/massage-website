@@ -24,16 +24,14 @@ const CourseItem = ({ children }: CourseItemProps) => (
 const Others = ({ data, styles, title = "", hasHeading = "" }: OthersProps) => {
   return (
     <div className="w-full mx-auto my-12 px-4">
-      <h2 className="text-center text-heading2 mt-4">{title}</h2>
-      <br />
-      <br />
+      {title && <h2 className="text-center text-heading2 mt-4">{title}</h2>}
+      {title && <br />}
+      {title && <br />}
       <div style={styles} className="lg:w-1/2 -my-3 space-y-3">
-        <h3 className="text-xl text-center">{hasHeading}</h3>
+        {hasHeading && <h3 className="text-xl text-center">{hasHeading}</h3>}
         <ul style={styles} className="list-disc">
           {data.map(({ id, title }) => (
-            <CourseItem key={id}>
-              {title}
-            </CourseItem>
+            <CourseItem key={id}>{title}</CourseItem>
           ))}
         </ul>
       </div>
