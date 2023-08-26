@@ -2,7 +2,7 @@
 package = "netlify-plugin-csp-generator"
 
   [plugins.inputs]
-  buildDir = "_next"
+  buildDir = ".next"
 
   [plugins.inputs.policies]
     defaultSrc = "'self'"
