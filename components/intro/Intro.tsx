@@ -1,4 +1,4 @@
-import massageRoomImg from "@/public/images/massage-room.jpg";
+import massageRoomImg from "@/public/images/massage-room.webp";
 import Image from "next/image";
 
 export default function Intro() {

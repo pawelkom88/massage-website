@@ -1,7 +1,7 @@
 import CallToAction from "@/components/cta/CallToAction";
 import Star from "@/components/icons/Star";
 import Image from "next/image";
-import massageRoomImg from "@/public/images/massage-room.jpg";
+import massageRoomImg from "@/public/images/massage-room.webp";
 
 export default function Hero() {
   return (

@@ -18,7 +18,7 @@ export default function Testimonials() {
           target="_blank"
           rel="noreferrer"
           className="block text-right underline"
-          href={process.env.NEXT_PUBLIC_GOOGLE_REVIEWS_LINK}>
+          href={process.env.NEXT_PUBLIC_GOOGLE_REVIEWS}>
           more reviews
         </a>
       </div>
