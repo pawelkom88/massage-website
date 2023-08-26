@@ -14,7 +14,7 @@ export default function Footer() {
             height="450"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=51.59190,-3.00961`}></iframe>
+            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=51.591812,-3.0086796`}></iframe>
         </div>
 
         <div className="w-full lg:col-span-2 mt-12 lg:mt-0">

@@ -4,25 +4,40 @@ import { dietAdvice, lifestyleAdvice, massageExpectations } from "./data";
 
 const BeforeAndDuringTreatment = () => {
   return (
-    <section className="px-4 max-w-readable mx-auto">
+    <section className="px-4 max-w-readable mx-auto py-8">
       <br />
-      <h1 className="text-center text-heading2 mt-4 uppercase">Before and during treatment</h1>
+      <h1 className="text-heading2 text-center px-4 my-8 uppercase">Before and during treatment</h1>
       <br />
-      <Others
-        hasHeading="What to expect after massage?"
-        data={massageExpectations}
-        styles={{ width: "100%", listStyle: "none" }}
-      />
-      <Others
-        hasHeading="Diet advice after treatment:"
-        data={dietAdvice}
-        styles={{ width: "100%", listStyle: "none" }}
-      />
-      <Others
-        hasHeading="What to expect after massage?"
-        data={lifestyleAdvice}
-        styles={{ width: "100%", listStyle: "none" }}
-      />
+      <h2 className="text-center lg:text-heading3">What to expect after massage?</h2>
+      {massageExpectations.map(text => {
+        return (
+          <p key={text.id} className="mt-3 lg:text-lg">
+            {text.title}
+          </p>
+        );
+      })}
+      <br />
+      <br />
+      <h2 className="text-center lg:text-heading3">Diet advice after treatment</h2>
+      <br />
+      {dietAdvice.map(text => {
+        return (
+          <p key={text.id} className="mt-3 lg:text-lg">
+            {text.title}
+          </p>
+        );
+      })}
+      <br />
+      <br />
+      <h2 className="text-center lg:text-heading3">What to expect after massage?</h2>
+      <br />
+      {lifestyleAdvice.map(text => {
+        return (
+          <p key={text.id} className="mt-3 lg:text-lg">
+            {text.title}
+          </p>
+        );
+      })}
       <br />
     </section>
   );

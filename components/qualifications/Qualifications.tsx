@@ -69,10 +69,10 @@ export default function Qualifications() {
           </div> */}
       {/* </div> */}
       {/* </div> */}
-      <Others
-        styles={{ margin: "0 auto", marginTop: "-4rem" }}
-        data={courses}
-      />
+      <br />
+      <br />
+
+      <Others styles={{ margin: "0 auto", marginTop: "-4rem" }} data={courses} />
       <br />
       <Image
         className="mx-auto"
