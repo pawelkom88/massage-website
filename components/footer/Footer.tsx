@@ -1,7 +1,8 @@
+import OpeningTimes from "@/components/opening-time/OpeningTimes";
 import FooterLinks from "./FooterLinks";
 import SocialMedia from "@/components/social-media/SocialMedia";
 
-export default function Footer() {
+export default async function Footer() {
   return (
     <footer className="bg-teriary-clr max-full px-4 text-white">
       <h2 className="text-heading2 text-center pt-12 pb-4">Get in touch</h2>
@@ -32,18 +33,8 @@ export default function Footer() {
               <br />
               <SocialMedia />
             </div>
-
-            <div>
-              <h3 className="text-heading3 mb-2">Working Hours:</h3>
-              <ul className="mt-4 space-y-1">
-                <li>Mondays 10am - 2pm & 5pm - 8pm</li>
-                <li>Tuesdays 5pm - 8pm</li>
-                <li>Wednesdays 10am - 2pm & 5pm - 8pm</li>
-                <li>Thursdays 5pm - 8pm</li>
-                <li>Friday 5pm - 8pm</li>
-                <li>Saturday 9.30am - 1pm</li>
-              </ul>
-            </div>
+            {/* @ts-expect-error Server Component */}
+            <OpeningTimes />
           </div>
           <FooterLinks />
         </div>
