@@ -1,0 +1,8 @@
+[[headers]]
+  for = "/*"
+    [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"
+    Feature-Policy = "camera 'none'; display-capture 'none'; document-domain 'none'; geolocation 'none'; microphone 'none'; payment 'none'; usb 'none'"
+    Content-Security-Policy = "default-src https://healthymuscles.co.uk; script-src https://healthymuscles.co.uk; style-src https://healthymuscles.co.uk; img-src https://healthymuscles.co.uk; connect-src https://healthymuscles.co.uk; font-src https://healthymuscles.co.uk; object-src https://healthymuscles.co.uk; media-src https://healthymuscles.co.uk; frame-src https://healthymuscles.co.uk"
