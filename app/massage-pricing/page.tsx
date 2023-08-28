@@ -89,7 +89,7 @@ export default async function Prices() {
       <br />
       <Link
         className="block mx-auto underline text-secondary-clr text-center font-bold"
-        href="/cancellation_policy">
+        href="/cancellation-policy">
         Cancellation Policy
       </Link>
       <br />

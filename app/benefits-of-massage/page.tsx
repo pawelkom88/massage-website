@@ -16,7 +16,7 @@ const BenefitsOfMassage = () => {
   return (
     <section className="px-4 max-w-readable mx-auto">
       <br />
-      <h2 className="text-center text-heading2 mt-4">BENEFITS OF MASSAGE</h2>
+      <h1 className="text-center text-heading2 mt-4">BENEFITS OF MASSAGE</h1>
       <br />
       <p className="mt-3 lg:text-lg">
         Massage can help to release chronic muscular tension and pain, improve circulation, increase

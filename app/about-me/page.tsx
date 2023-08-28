@@ -35,9 +35,9 @@ export default function AboutMe() {
 
           <div className="w-full px-4 xl:w-5/12">
             <div className="mt-4 lg:mt-0">
-              <span className="text-secondary-clr mb-2 block text-lg font-semibold text-center lg:text-left">
+              <h1 className="text-secondary-clr mb-2 block text-lg font-semibold text-center lg:text-left">
                 About me
-              </span>
+              </h1>
               {aboutMe.map(({ id, content }) => {
                 return (
                   <p key={id} className="indent-2 text-justify text-lg mb-4">
