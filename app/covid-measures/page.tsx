@@ -6,7 +6,10 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Your Safety Matters - Newport Massage Therapy Appointments",
   description:
-  "Your well-being is our priority. Discover how we prioritize safety through health & safety training, infection control, and hygiene practices. Book your massage therapy appointment with confidence.",
+    "Your well-being is our priority. Discover how we prioritize safety through health & safety training, infection control, and hygiene practices. Book your massage therapy appointment with confidence.",
+  alternates: {
+    canonical: "covid-measures",
+  },
 };
 
 const Covid = () => {

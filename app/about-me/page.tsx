@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "About Edyta - Experienced Massage Therapist in Newport",
   description:
   "Meet Edyta, an experienced and fully qualified massage therapist in Newport.Edyta specializes in Sports Massage and Injury Rehabilitation.",
+  alternates: {
+    canonical: "about-me",
+  },
 };
 
 export default function AboutMe() {

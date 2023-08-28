@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { SubLink, generateLinkFromName, names } from "./data";
+import { SubLink, generateLinkFromName, linkNames } from "./data";
 
 // Use the names to create subLinks1
-export const subLinks1 = names.map((name, index) => ({
+export const subLinks1 = linkNames.map((name, index) => ({
   id: index + 1,
   name,
   href: `/treatments/${generateLinkFromName(name)}`,

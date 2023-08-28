@@ -18,11 +18,13 @@ export const generateMetadata = ({ params }: Props): Metadata => {
   return {
     title: `${title}`,
     description: ` "Experience the benefits of ${title} in Newport. Discover relief from pain and stress`,
+    alternates: {
+      canonical: `${params.slug}`,
+    },
   };
 };
 
 export default async function Treatment({ params }: { params: { slug: string } }) {
-
   const article: any = await fetchArticle({
     preview: false,
     slug: params.slug,

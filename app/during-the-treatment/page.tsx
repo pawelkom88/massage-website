@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Massage Care Tips - Before, During, and After Treatment",
   description:
     "Learn what to expect before, during, and after your massage therapy session. Discover post-massage care tips to enhance your relaxation and well-being.",
+  alternates: {
+    canonical: "during-the-treatment",
+  },
 };
 
 const BeforeAndDuringTreatment = () => {

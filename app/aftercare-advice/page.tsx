@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Massage Expectations - Newport Massage Therapy Experience",
   description:
     "Discover what to expect during your Newport massage therapy session. We prioritize your comfort and safety with a detailed consultation, customizable massage, and state-of-the-art massage equipment.",
+  alternates: {
+    canonical: "aftercare-advice",
+  },
 };
 
 const AfterCareAdvice = () => {

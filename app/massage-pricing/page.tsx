@@ -9,6 +9,16 @@ import { options } from "@/contentful/helpers";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { draftMode } from "next/headers";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Newport Massage Therapy Prices - Affordable Massage Sessions",
+  description:
+    "Discover the pricing details for Healthy Muscles therapy sessions. I offer a range of options, including Hot Stone Therapy. Learn about our discounts, gift vouchers, and more.",
+  alternates: {
+    canonical: "massage-pricing",
+  },
+};
 
 const tableBorder = "border px-4 py-2";
 

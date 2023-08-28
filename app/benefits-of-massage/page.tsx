@@ -6,7 +6,10 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Massage Benefits - Enhance Your Well-being with Newport Massage",
   description:
-  "Discover the extensive benefits of massage therapy in Healthy Muscle. From pain relief and improved circulation to reduced stress and enhanced joint flexibility, massage offers a wide range of advantages.",
+    "Discover the extensive benefits of massage therapy in Healthy Muscle. From pain relief and improved circulation to reduced stress and enhanced joint flexibility, massage offers a wide range of advantages.",
+  alternates: {
+    canonical: "benefits-of-massage",
+  },
 };
 
 const BenefitsOfMassage = () => {

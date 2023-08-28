@@ -13,6 +13,14 @@ export const metadata: Metadata = {
   title: "Healthy Muscles - Massage Therapy Newport | Relaxation, Sports, Remedial",
   description:
     "Newport's trusted expert in relaxation, sports, and remedial massages. Experience the difference today for a healthier you. (Book now)",
+
+  metadataBase: new URL("https://healthymuscles.co.uk/"),
+  alternates: {
+    canonical: "https://healthymuscles.co.uk/",
+  },
+  verification: {
+    google: 'google-site-verification=mJncPcLuTOo9VCkLffYV27BUdLCdSFaVWlfEGS-2L2U',
+  },
   openGraph: {
     title: "Healthy Muscles - Massage Therapy Newport | Relaxation, Sports, Remedial",
     description:
@@ -21,12 +29,12 @@ export const metadata: Metadata = {
     siteName: "Healthy Muscles",
     images: [
       {
-        url: "https://healthymuscles.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmassage-room.32b52a85.webp&w=800&q=75",
+        url: "_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmassage-room.32b52a85.webp&w=800&q=75",
         width: 800,
         height: 600,
       },
       {
-        url: "https://healthymuscles.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmassage-room.32b52a85.webp&w=1200&q=75",
+        url: "_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmassage-room.32b52a85.webp&w=1200&q=75",
         width: 1800,
         height: 1600,
         alt: "Healthy Muscles",
