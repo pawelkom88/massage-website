@@ -5,4 +5,4 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer-when-downgrade"
     Feature-Policy = "camera 'none'; display-capture 'none'; document-domain 'none'; geolocation 'none'; microphone 'none'; payment 'none'; usb 'none'"
-    Content-Security-Policy: default-src https://*.healthymuscles.co.uk; script-src https://*.healthymuscles.co.uk https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com/*; style-src 'unsafe-inline'; img-src data: https://*.healthymuscles.co.uk www.google-analytics.com https://*.images.ctfassets.net
+    Content-Security-Policy = "default-src https://*.healthymuscles.co.uk; script-src https://*.healthymuscles.co.uk https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com/*; style-src 'unsafe-inline'; img-src data: https://*.healthymuscles.co.uk www.google-analytics.com https://*.images.ctfassets.net"
