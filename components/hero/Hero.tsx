@@ -20,7 +20,7 @@ export default function Hero() {
           <h1 className="text-heading leading-[1.20] lg:leading-[1.40] uppercase px-4 mt-6 mb-4">
             Professional massage therapy in Newport
           </h1>
-          <p className="mt-3 lg:text-lg px-4">
+          <p className="mt-3 text-lg px-4">
             Whether you need a <span className="font-bold">sports massage</span> to enhance your
             performance, remedial treatment when you are stuck at a desk all day or{" "}
             <span className="font-bold">relaxation massage</span> to soothe your stress, look no
@@ -28,7 +28,7 @@ export default function Hero() {
             health to your muscles. Relax and let me take care of you.
           </p>
           <br />
-          <p className="mt-3 lg:text-lg px-4">
+          <p className="mt-3 text-lg px-4">
             Thank you very much for visiting my website, hope you find all the information you need,
             if not don&apos;t hesitate to give me a call on my mobile{" "}
             <a className="hidden lg:block font-bold" href="tel:07525431743">

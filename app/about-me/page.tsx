@@ -2,8 +2,14 @@ import React from "react";
 import { aboutMe } from "./data";
 import Image from "next/image";
 import massage1 from "@/public/images/Edyta-performing-massage.webp";
-import massage2 from "@/public/images/client-lying-on-bed-during-massage.JPG.webp";
 import Qualifications from "@/components/qualifications/Qualifications";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Edyta - Experienced Massage Therapist in Newport",
+  description:
+  "Meet Edyta, an experienced and fully qualified massage therapist in Newport.Edyta specializes in Sports Massage and Injury Rehabilitation.",
+};
 
 export default function AboutMe() {
   return (
@@ -29,7 +35,6 @@ export default function AboutMe() {
               <span className="text-secondary-clr mb-2 block text-lg font-semibold text-center lg:text-left">
                 About me
               </span>
-              {/* <h2 className="mt-2 mb-4 text-heading2">Welcome!</h2> */}
               {aboutMe.map(({ id, content }) => {
                 return (
                   <p key={id} className="indent-2 text-justify text-lg mb-4">

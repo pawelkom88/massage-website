@@ -116,22 +116,22 @@ const MobileNavigation: React.FC = () => {
         title="Open Menu"
         className={`fixed bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-16 w-16 flex-col items-center justify-center rounded-full pt-2 z-[100]
                 ${isElementVisibleBottom ? "bg-primary-clr" : "bg-teriary-clr"}`}>
-        <div
+        <span
           className={`${genericHamburgerLine} ${
             toggleMenu && "translate-y-[8.5px] rotate-45 opacity-100"
           }`}
         />
-        <div
+        <span
           className={`${genericHamburgerLine} ${
             toggleMenu && "-translate-y-[-1px] -rotate-45 opacity-100"
           }`}
         />
-        <small
+        <span
           className={`${
             toggleMenu ? "opacity-0" : "opacity-100"
           } text-white transition-opacity duration-200 ease-in-out`}>
           menu
-        </small>
+        </span>
       </button>
 
       {toggleMenu && (

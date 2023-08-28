@@ -2,7 +2,7 @@ import CallToAction from "../cta/CallToAction";
 
 const Promotion = () => {
   return (
-    <section className="my-24 max-w-readable mx-auto px-4 lg:px-0 lg:text-lg">
+    <section className="my-24 max-w-readable mx-auto px-4 lg:px-0 text-lg">
       <h2 className="text-heading2 leading-[3rem] text-center">
         Three Years of Excellence: Newport&apos;s Top-Rated Massage Therapist
       </h2>

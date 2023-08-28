@@ -1,5 +1,15 @@
 import contentfulClient from "./contentfulClient";
-import { parseContentfulContentImage } from "./contentImage";
+
+export function parseContentfulPolicy(policy) {
+  if (!policy) {
+    return null;
+  }
+
+  return {
+    heading: policy.fields.heading || "",
+    content: policy.fields.content || "",
+  };
+}
 
 export function parseContentfulArticle(article) {
   if (!article) {
@@ -12,9 +22,10 @@ export function parseContentfulArticle(article) {
     description: article.fields.description || null,
     duration: article.fields.duration || null,
     price: article.fields.price || null,
-    image: parseContentfulContentImage(article.fields.image),
+    // image: parseContentfulContentImage(article.fields.image),
   };
 }
+
 export function parseContentfulOpeningHours(hours) {
   if (!hours) {
     return null;
@@ -27,25 +38,27 @@ export function parseContentfulOpeningHours(hours) {
   };
 }
 
-// A function to fetch all blog posts.
-// Optionally uses the Contentful content preview.
+export function parseContentfulPrices(prices) {
+  if (!prices) {
+    return null;
+  }
 
-export async function fetchArticles({ preview }, content_type) {
-  const contentful = contentfulClient({ preview });
-
-  const ArticlesResult = await contentful.getEntries({
-    content_type,
-    // include: 2,
-    // order: [order],
-  });
-
-  return ArticlesResult.items.map(hours => parseContentfulOpeningHours(hours));
-
-  // return ArticlesResult.items.map(article => parseContentfulArticle(article));
+  return {
+    intro: prices.fields.intro || "",
+    price: prices.fields.price,
+    duration: prices.fields.duration || null,
+    treatmentName: prices.fields.treatmentName || "",
+    content: prices.fields.content || "",
+  };
 }
 
-// A function to fetch a single blog post by its slug.
-// Optionally uses the Contentful content preview.
+export async function fetchArticles({ preview }, content_type, parseFunction) {
+  const contentful = contentfulClient({ preview });
+
+  const result = await contentful.getEntries({ content_type });
+
+  return result?.items?.map(parseFunction) || [];
+}
 
 export async function fetchArticle({ slug, preview, content_type }) {
   const contentful = contentfulClient({ preview });

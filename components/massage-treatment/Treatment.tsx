@@ -51,6 +51,7 @@ function MassageTreatment({ article }: MassageTreatmentProps) {
     <section className="px-4">
       <h1 className="text-heading2 text-center px-4 my-12 uppercase">{title}</h1>
       {documentToReactComponents(description, options)}
+      <br />
       <TreatmentList durationArray={duration} priceArray={price} />
       <br />
       <p className="max-w-readable mx-auto my-12 indent-1.5 text-justify text-lg">
@@ -62,7 +63,18 @@ function MassageTreatment({ article }: MassageTreatmentProps) {
         <a className="text-primary-clr" href="tel:07525431743">
           07525431743
         </a>
-        .
+        <br />
+        <br />
+        <div className="flex flex-col">
+          <small>* Gift vouchers available</small>
+          <small>
+            * There is a 48hour cancellation policy - 48hours notice for appointment adjustments or
+            cancellations. Same day cancellations will be charged 50% of the price. No show is
+            charged full price.
+          </small>
+          <small>* I supply official receipts for a Health Shield Claim</small>
+          <small>* Cardiff University staff discount - £5 off your first 60min appointment.</small>
+        </div>
       </p>
     </section>
   );

@@ -1,21 +1,32 @@
-import { fetchArticles } from "@/contentful/getArticles";
+import { fetchArticles, parseContentfulOpeningHours } from "@/contentful/getArticles";
 import { draftMode } from "next/headers";
 import OpeningTimesTable from "./OpeningTimesTable";
 
 export interface ScheduleByDay {
-  [key: string]: string[];
+  [day: string]: string[];
+}
+
+export function generateScheduleByDay(openingHours: ScheduleByDay[]) {
+  const scheduleByDay: ScheduleByDay = {};
+
+  openingHours.forEach(schedule => {
+    schedule.day.forEach((day: string, index: number) => {
+      scheduleByDay[day] = scheduleByDay[day] || [];
+      scheduleByDay[day].push(`${schedule.start[index]} & ${schedule.finish[index]}`);
+    });
+  });
+
+  return scheduleByDay;
 }
 
 export default async function OpeningTimes() {
-  const openingHours: any = await fetchArticles({ preview: draftMode().isEnabled }, "openingTimes");
+  const openingHours: any = await fetchArticles(
+    { preview: draftMode().isEnabled },
+    "openingTimes",
+    parseContentfulOpeningHours
+  );
 
-  const scheduleByDay: ScheduleByDay = openingHours.reduce((acc: ScheduleByDay, schedule: any) => {
-    schedule.day.forEach((day: string, index: number) => {
-      acc[day] = acc[day] || [];
-      acc[day].push(`${schedule.start[index]} & ${schedule.finish[index]}`);
-    });
-    return acc;
-  }, {});
+  const scheduleByDay = generateScheduleByDay(openingHours);
 
   return <OpeningTimesTable scheduleByDay={scheduleByDay} />;
 }

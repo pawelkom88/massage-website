@@ -5,7 +5,6 @@ interface FooterLinks {
 }
 
 export const footerLinks: FooterLinks[] = [
-  { id: 1, name: "Terms & Conditions", link: "/" },
-  { id: 2, name: "Privacy Policy", link: "/" },
-  { id: 3, name: "??", link: "/" },
+  { id: 1, name: "Cancellation Policy", link: "/cancellation_policy" },
+
 ];

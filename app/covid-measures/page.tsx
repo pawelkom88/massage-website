@@ -1,6 +1,13 @@
 import Image from "next/image";
 import covid1 from "../../public/images/COVID-19.webp";
 import covid2 from "../../public/images/prevent-COVID.webp";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Your Safety Matters - Newport Massage Therapy Appointments",
+  description:
+  "Your well-being is our priority. Discover how we prioritize safety through health & safety training, infection control, and hygiene practices. Book your massage therapy appointment with confidence.",
+};
 
 const Covid = () => {
   return (

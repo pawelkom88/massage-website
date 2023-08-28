@@ -2,7 +2,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 
 function paragraphClass(node: string) {
-  const className = "max-w-readable mx-auto my-12 indent-1.5 text-justify text-lg";
+  const className = "max-w-readable mx-auto my-4 indent-1.5 text-justify text-lg";
   return className;
 }
 
@@ -11,7 +11,7 @@ function headingClass(node: string) {
   return className;
 }
 function heading3Class(node: string) {
-  const className = "text-xl my-4 font-bold text-center";
+  const className = "text-xl my-8 font-bold text-center";
   return className;
 }
 
@@ -39,7 +39,9 @@ export const options = {
     },
 
     [INLINES.HYPERLINK]: (node: any, children: React.ReactNode) => (
-      <a href={node.data.uri}>{children}</a>
+      <a className="text-secondary-clr underline" href={node.data.uri}>
+        {children}
+      </a>
     ),
 
     [BLOCKS.LIST_ITEM]: (node: any, children: React.ReactNode) => {
