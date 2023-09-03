@@ -18,9 +18,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://healthymuscles.co.uk/",
   },
-  verification: {
-    google: 'google-site-verification=mJncPcLuTOo9VCkLffYV27BUdLCdSFaVWlfEGS-2L2U',
-  },
   openGraph: {
     title: "Healthy Muscles - Massage Therapy Newport | Relaxation, Sports, Remedial",
     description:
