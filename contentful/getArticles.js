@@ -1,4 +1,5 @@
 import contentfulClient from "./contentfulClient";
+import { parseContentfulContentImage } from "./contentImage";
 
 export function parseContentfulPolicy(policy) {
   if (!policy) {
@@ -22,7 +23,7 @@ export function parseContentfulArticle(article) {
     description: article.fields.description || null,
     duration: article.fields.duration || null,
     price: article.fields.price || null,
-    // image: parseContentfulContentImage(article.fields.image),
+    image: parseContentfulContentImage(article.fields.image),
   };
 }
 

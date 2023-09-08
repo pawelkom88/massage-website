@@ -1,6 +1,7 @@
 import React from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { options } from "@/contentful/helpers";
+import Image from "next/image";
 
 interface TreatmentListItemProps {
   duration: number;
@@ -46,7 +47,8 @@ export interface MassageTreatmentProps {
 }
 
 function MassageTreatment({ article }: MassageTreatmentProps) {
-  const { title, price, duration, description } = article;
+  const { title, price, duration, description, image } = article;
+ 
   return (
     <section className="px-4">
       <h1 className="text-heading2 text-center px-4 my-12 uppercase">{title}</h1>
@@ -64,6 +66,9 @@ function MassageTreatment({ article }: MassageTreatmentProps) {
           07525431743
         </a>
         <br />
+        {image ? (
+          <Image className="my-12" src={image?.src} width={image?.width} height={image?.height} alt={image?.alt} />
+        ) : null}
         <br />
         <div className="flex flex-col">
           <small>* Gift vouchers available</small>
