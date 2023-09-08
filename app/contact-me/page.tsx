@@ -21,7 +21,12 @@ const Contact = () => {
         method="POST"
         id="form"
         className="mx-auto lg:w-2/3 space-y-6 my-12">
-        <input required type="hidden" name="redirect" value="healthymuscles.co.uk/success" />
+        <input
+          required
+          type="hidden"
+          name="redirect"
+          value="https://healthymuscles.co.uk/success"
+        />
         <input type="hidden" name="subject" value="New message from your website" />
         <input type="hidden" name="apikey" value="d5076a2c-294c-401a-8757-40caaeced8a3" />
 

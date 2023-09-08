@@ -31,24 +31,26 @@ function TreatmentList({ durationArray, priceArray }: TreatmentListProps) {
   );
 }
 
+interface ContentfulImage {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
 export interface MassageTreatmentProps {
   article: {
     title: string;
     price: number[];
     duration: number[];
     description: any;
-    image?: {
-      src: string;
-      alt: string;
-      width: number;
-      height: number;
-    } | null;
+    images?: ContentfulImage[];
   };
 }
 
 function MassageTreatment({ article }: MassageTreatmentProps) {
-  const { title, price, duration, description, image } = article;
- 
+  const { title, price, duration, description, images } = article;
+
   return (
     <section className="px-4">
       <h1 className="text-heading2 text-center px-4 my-12 uppercase">{title}</h1>
@@ -66,8 +68,20 @@ function MassageTreatment({ article }: MassageTreatmentProps) {
           07525431743
         </a>
         <br />
-        {image ? (
-          <Image className="my-12" src={image?.src} width={image?.width} height={image?.height} alt={image?.alt} />
+        {images?.length ? (
+          <div className="max-w-full grid lg:grid-cols-[repeat(auto-fill,minmax(250px,1fr))] lg:grid-rows-[250px] lg:grid-flow-row-dense gap-3 my-12">
+            {images.map(image => {
+              return (
+                <Image
+                  key={image?.src}
+                  src={image?.src}
+                  width={image?.width}
+                  height={image?.height}
+                  alt={image?.alt}
+                />
+              );
+            })}
+          </div>
         ) : null}
         <br />
         <div className="flex flex-col">

@@ -1,5 +1,5 @@
 import contentfulClient from "./contentfulClient";
-import { parseContentfulContentImage } from "./contentImage";
+import { parseContentfulContentImages } from "./contentImage";
 
 export function parseContentfulPolicy(policy) {
   if (!policy) {
@@ -16,14 +16,13 @@ export function parseContentfulArticle(article) {
   if (!article) {
     return null;
   }
-
   return {
     title: article.fields.title || "",
     slug: article.fields.slug,
     description: article.fields.description || null,
     duration: article.fields.duration || null,
     price: article.fields.price || null,
-    image: parseContentfulContentImage(article.fields.image),
+    images: parseContentfulContentImages(article.fields.images),
   };
 }
 
