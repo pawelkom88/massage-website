@@ -6,6 +6,7 @@ import Promotion from "@/components/promotion/Promotion";
 export default function Home() {
   return (
     <>
+      {/* @ts-ignore */}
       <Hero />
       <Popup />
       <main>

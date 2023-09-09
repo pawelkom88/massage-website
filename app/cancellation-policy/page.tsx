@@ -1,10 +1,10 @@
 import { options } from "@/contentful/helpers";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { draftMode } from "next/headers";
-import { fetchArticles, parseContentfulPolicy } from "@/contentful/getArticles";
+import { fetchContent, parseContentfulPolicy } from "@/contentful/fetchContent";
 
 const Policy = async () => {
-  const policy: any = await fetchArticles(
+  const policy: any = await fetchContent(
     { preview: draftMode().isEnabled },
     "policy",
     parseContentfulPolicy

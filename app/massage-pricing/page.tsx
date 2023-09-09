@@ -1,10 +1,10 @@
 import { generateScheduleByDay } from "@/components/opening-time/OpeningTimes";
 import OpeningTimesTable from "@/components/opening-time/OpeningTimesTable";
 import {
-  fetchArticles,
+  fetchContent,
   parseContentfulOpeningHours,
   parseContentfulPrices,
-} from "@/contentful/getArticles";
+} from "@/contentful/fetchContent";
 import { options } from "@/contentful/helpers";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { draftMode } from "next/headers";
@@ -23,13 +23,13 @@ export const metadata: Metadata = {
 const tableBorder = "border px-4 py-2";
 
 export default async function Prices() {
-  const prices: any = await fetchArticles(
+  const prices: any = await fetchContent(
     { preview: draftMode().isEnabled },
     "prices",
     parseContentfulPrices
   );
 
-  const openingHours: any = await fetchArticles(
+  const openingHours: any = await fetchContent(
     { preview: draftMode().isEnabled },
     "openingTimes",
     parseContentfulOpeningHours

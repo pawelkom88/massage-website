@@ -1,4 +1,4 @@
-import { fetchArticle } from "@/contentful/getArticles";
+import { fetchArticle } from "@/contentful/fetchContent";
 import MassageTreatment from "@/components/massage-treatment/Treatment";
 import { Metadata } from "next";
 

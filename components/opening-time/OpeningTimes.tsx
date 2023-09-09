@@ -1,4 +1,4 @@
-import { fetchArticles, parseContentfulOpeningHours } from "@/contentful/getArticles";
+import { fetchContent, parseContentfulOpeningHours } from "@/contentful/fetchContent";
 import { draftMode } from "next/headers";
 import OpeningTimesTable from "./OpeningTimesTable";
 
@@ -20,7 +20,7 @@ export function generateScheduleByDay(openingHours: ScheduleByDay[]) {
 }
 
 export default async function OpeningTimes() {
-  const openingHours: any = await fetchArticles(
+  const openingHours: any = await fetchContent(
     { preview: draftMode().isEnabled },
     "openingTimes",
     parseContentfulOpeningHours

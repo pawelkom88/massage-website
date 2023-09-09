@@ -1,7 +1,6 @@
 import { ScheduleByDay } from "./OpeningTimes";
 
 const OpeningTimesTable = ({ scheduleByDay }: { scheduleByDay: ScheduleByDay }) => {
-  console.log(scheduleByDay);
 
   return (
     <div>

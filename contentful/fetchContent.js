@@ -1,5 +1,5 @@
 import contentfulClient from "./contentfulClient";
-import { parseContentfulContentImages } from "./contentImage";
+import { parseContentfulContentImages, parseContentfulContentImage } from "./contentImage";
 
 export function parseContentfulPolicy(policy) {
   if (!policy) {
@@ -52,7 +52,28 @@ export function parseContentfulPrices(prices) {
   };
 }
 
-export async function fetchArticles({ preview }, content_type, parseFunction) {
+export function parseContentfulHeroContent(content) {
+  if (!content) {
+    return null;
+  }
+  return {
+    image: parseContentfulContentImage(content.fields.heroImage) || null,
+    heading: content.fields.heading || "",
+    content: content.fields.content || "",
+  };
+}
+
+export function parseContentfulPromotion(content){
+  if(!content){
+    return null;
+  }
+  return {
+    heading: content.fields.heading || "",
+    content: content.fields.content || "",
+  }
+} 
+
+export async function fetchContent({ preview }, content_type, parseFunction) {
   const contentful = contentfulClient({ preview });
 
   const result = await contentful.getEntries({ content_type });

@@ -31,7 +31,7 @@ function TreatmentList({ durationArray, priceArray }: TreatmentListProps) {
   );
 }
 
-interface ContentfulImage {
+export interface ContentfulImage {
   src: string;
   alt: string;
   width: number;
