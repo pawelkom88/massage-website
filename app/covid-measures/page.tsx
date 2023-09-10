@@ -52,11 +52,7 @@ const Covid = () => {
       <br />
       <div>
         <Image
-          width={covid1.width}
-          height={covid1.height}
           src={covid1.src}
-          blurDataURL={covid1.blurDataURL}
-          placeholder="blur"
           alt="certificates proudly displaying COVID-19 prevention training from reputable sources"
           className="border"
         />
@@ -64,11 +60,7 @@ const Covid = () => {
         <br />
         <br />
         <Image
-          width={covid2.width}
-          height={covid2.height}
           src={covid2.src}
-          blurDataURL={covid2.blurDataURL}
-          placeholder="blur"
           alt="Certificates of training and qualification in health & safety and infection control - COVID-19"
           className="border"
         />

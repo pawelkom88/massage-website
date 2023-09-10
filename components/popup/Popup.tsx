@@ -53,10 +53,8 @@ export default function Popup() {
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <Image
                   src={popupImg}
-                  width={500}
-                  height={500}
                   className="h-full w-full rounded-xl object-cover"
-                  alt=""
+                  alt="pop banner with offer"
                 />
 
                 <div>
