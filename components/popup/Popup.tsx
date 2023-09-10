@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import popupImg from "@/public/images/sport-massage-session.jpg";
+import popupImg from "@/public/images/sport-massage-session.webp";
 import { setItemInLocalStorage } from "@/helpers/helpers";
 
 export default function Popup() {
