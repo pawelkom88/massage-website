@@ -7,7 +7,17 @@ import Image from "next/image";
 const notesOptions = {
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node: any, children: React.ReactNode) => (
-      <small className="block">{children}</small>
+      <p className="text-sm text-gray-600 mb-2 leading-relaxed">
+        {children}
+      </p>
+    ),
+    [BLOCKS.UL_LIST]: (node: any, children: React.ReactNode) => (
+      <ul className="text-sm text-gray-600 mb-4 list-disc space-y-1">
+        {children}
+      </ul>
+    ),
+    [BLOCKS.LIST_ITEM]: (node: any, children: React.ReactNode) => (
+      <li className="leading-relaxed">{children}</li>
     ),
   },
 };
@@ -83,33 +93,34 @@ function MassageTreatment({ article, treatmentNotes }: MassageTreatmentProps) {
         </a>
       </p>
       {images?.length ? (
-        <div className="max-w-full grid lg:grid-cols-[repeat(auto-fill,minmax(250px,1fr))] lg:grid-rows-[250px] lg:grid-flow-row-dense gap-3 my-12">
-          {images.map(image => {
-            return (
+        <div className="max-w-readable mx-auto my-12 columns-1 sm:columns-2 lg:columns-3 gap-3">
+          {images.map((image) => (
+            <div key={image.src} className="mb-3 break-inside-avoid">
               <Image
-                key={image?.src}
-                src={image?.src}
-                width={image?.width}
-                height={image?.height}
-                alt={image?.alt}
+                src={image.src}
+                width={image.width}
+                height={image.height}
+                alt={image.alt}
+                className="w-full h-auto rounded-2xl"
               />
-            );
-          })}
+            </div>
+          ))}
         </div>
       ) : null}
-      <div className="flex flex-col">
-        {treatmentNotes?.notes ? (
+
+      <div className="flex flex-col max-w-readable mx-auto mb-8 text-left">
+        {treatmentNotes?.notes && typeof treatmentNotes.notes === 'object' && treatmentNotes.notes.content ? (
           documentToReactComponents(treatmentNotes.notes, notesOptions)
         ) : (
           <>
-            <small>* Gift vouchers available</small>
-            <small>
+            <small className="text-left block">* Gift vouchers available</small>
+            <small className="text-left block">
               * There is a 48hour cancellation policy - 48hours notice for appointment adjustments or
               cancellations. Same day cancellations will be charged 50% of the price. No show is
               charged full price.
             </small>
-            <small>* I supply official receipts for a Health Shield Claim</small>
-            <small>* Cardiff University staff discount - £5 off your first 60min appointment.</small>
+            <small className="text-left block">* I supply official receipts for a Health Shield Claim</small>
+            <small className="text-left block">* Cardiff University staff discount - £5 off your first 60min appointment.</small>
           </>
         )}
       </div>
