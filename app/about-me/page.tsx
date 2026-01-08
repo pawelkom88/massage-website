@@ -34,7 +34,6 @@ interface AboutPageContent {
 export default async function AboutMe() {
   const draft = await draftMode();
   const preview = draft.isEnabled;
-  console.log("[AboutMe] Draft mode enabled:", preview);
 
   const aboutContent = await fetchContent(
     { preview },
@@ -42,10 +41,7 @@ export default async function AboutMe() {
     parseContentfulAboutPage
   );
 
-  console.log("[AboutMe] Fetched content:", JSON.stringify(aboutContent, null, 2));
-
   const content = aboutContent[0] as AboutPageContent | undefined;
-  console.log("[AboutMe] Using content:", content ? "Contentful" : "Fallback hardcoded");
 
   return (
     <section className="max-w-[85rem] px-4 mx-auto overflow-hidden pt-8 lg:pt-20 pb-12 mb-12">

@@ -29,7 +29,6 @@ export default async function Treatment({ params }: { params: Promise<{ slug: st
   const { slug } = await params;
   const draft = await draftMode();
   const preview = draft.isEnabled;
-  console.log("[Treatment] Draft mode enabled:", preview);
 
   const [article, treatmentNotes] = await Promise.all([
     fetchArticle({
@@ -39,9 +38,6 @@ export default async function Treatment({ params }: { params: Promise<{ slug: st
     }),
     fetchContent({ preview }, "treatmentNotes", parseContentfulTreatmentNotes),
   ]);
-
-  console.log("[Treatment] Treatment notes:", JSON.stringify(treatmentNotes, null, 2));
-  console.log("[Treatment] Using notes:", treatmentNotes[0] ? "Contentful" : "Fallback hardcoded");
 
   return <MassageTreatment article={article as any} treatmentNotes={treatmentNotes[0]} />;
 }
