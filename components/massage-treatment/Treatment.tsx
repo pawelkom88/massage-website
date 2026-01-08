@@ -1,7 +1,17 @@
 import React from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
 import { options } from "@/contentful/helpers";
 import Image from "next/image";
+
+// Custom options for treatment notes - renders paragraphs as small text
+const notesOptions = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node: any, children: React.ReactNode) => (
+      <small className="block">{children}</small>
+    ),
+  },
+};
 
 interface TreatmentListItemProps {
   duration: number;
@@ -38,6 +48,10 @@ export interface ContentfulImage {
   height: number;
 }
 
+export interface TreatmentNotes {
+  notes: any;
+}
+
 export interface MassageTreatmentProps {
   article: {
     title: string;
@@ -46,9 +60,10 @@ export interface MassageTreatmentProps {
     description: any;
     images?: ContentfulImage[];
   };
+  treatmentNotes?: TreatmentNotes | null;
 }
 
-function MassageTreatment({ article }: MassageTreatmentProps) {
+function MassageTreatment({ article, treatmentNotes }: MassageTreatmentProps) {
   const { title, price, duration, description, images } = article;
 
   return (
@@ -85,14 +100,20 @@ function MassageTreatment({ article }: MassageTreatmentProps) {
         ) : null}
         <br />
         <div className="flex flex-col">
-          <small>* Gift vouchers available</small>
-          <small>
-            * There is a 48hour cancellation policy - 48hours notice for appointment adjustments or
-            cancellations. Same day cancellations will be charged 50% of the price. No show is
-            charged full price.
-          </small>
-          <small>* I supply official receipts for a Health Shield Claim</small>
-          <small>* Cardiff University staff discount - £5 off your first 60min appointment.</small>
+          {treatmentNotes?.notes ? (
+            documentToReactComponents(treatmentNotes.notes, notesOptions)
+          ) : (
+            <>
+              <small>* Gift vouchers available</small>
+              <small>
+                * There is a 48hour cancellation policy - 48hours notice for appointment adjustments or
+                cancellations. Same day cancellations will be charged 50% of the price. No show is
+                charged full price.
+              </small>
+              <small>* I supply official receipts for a Health Shield Claim</small>
+              <small>* Cardiff University staff discount - £5 off your first 60min appointment.</small>
+            </>
+          )}
         </div>
       </p>
     </section>

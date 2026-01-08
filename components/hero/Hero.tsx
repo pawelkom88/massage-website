@@ -13,8 +13,9 @@ interface Hero {
 }
 
 export default async function Hero() {
+  const draft = await draftMode();
   const hero: Hero[] = await fetchContent(
-    { preview: draftMode().isEnabled },
+    { preview: draft.isEnabled },
     "hero",
     parseContentfulHeroContent
   );

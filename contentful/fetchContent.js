@@ -71,7 +71,29 @@ export function parseContentfulPromotion(content){
     heading: content.fields.heading || "",
     content: content.fields.content || "",
   }
-} 
+}
+
+export function parseContentfulTreatmentNotes(content) {
+  if (!content) {
+    return null;
+  }
+  return {
+    notes: content.fields.notes || null,
+  };
+}
+
+export function parseContentfulAboutPage(content) {
+  if (!content) {
+    return null;
+  }
+  return {
+    heading: content.fields.heading || "About me",
+    content: content.fields.content || null,
+    image: parseContentfulContentImage(content.fields.image),
+    qualificationsHeading: content.fields.qualificationsHeading || "",
+    qualifications: content.fields.qualifications || [],
+  };
+}
 
 export async function fetchContent({ preview }, content_type, parseFunction) {
   const contentful = contentfulClient({ preview });

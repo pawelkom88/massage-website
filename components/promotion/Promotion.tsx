@@ -10,8 +10,9 @@ interface Promotion {
 }
 
 const Promotion = async () => {
+  const draft = await draftMode();
   const promotiom: Promotion[] = await fetchContent(
-    { preview: draftMode().isEnabled },
+    { preview: draft.isEnabled },
     "intro",
     parseContentfulPromotion
   );
