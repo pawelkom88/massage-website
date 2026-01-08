@@ -4,6 +4,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
+    formats: ['jpg', 'jpeg', 'png', 'webp', 'svg', 'gif', 'ico'],
     remotePatterns: [
       {
         protocol: "https",
