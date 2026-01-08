@@ -1,21 +1,17 @@
 import OpeningTimes from "@/components/opening-time/OpeningTimes";
 import FooterLinks from "./FooterLinks";
 import SocialMedia from "@/components/social-media/SocialMedia";
+import Image from "next/image";
 
 export default async function Footer() {
   return (
     <footer className="bg-teriary-clr max-full px-4 text-white">
       <h2 className="text-heading2 text-center pt-12 pb-4">Get in touch</h2>
       <div className="max-w-[85rem] mx-auto lg:grid lg:grid-cols-4 lg:gap-12 place-items-center py-8">
-        <div className="w-full block lg:col-span-2 h-96">
-          <iframe
-            title="google map"
-            className="h-full w-full border-none"
-            width="400"
-            height="450"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=51.591812,-3.0086796`}></iframe>
+        <div className="w-full block lg:col-span-2 h-full">
+         <Image src="/images/edyta-address-google-map.png" alt="Edyta's address in google map"    width="500"
+                height="450"
+                loading="lazy" />
         </div>
 
         <div className="w-full lg:col-span-2 mt-12 lg:mt-0">

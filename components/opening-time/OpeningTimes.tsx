@@ -20,8 +20,9 @@ export function generateScheduleByDay(openingHours: ScheduleByDay[]) {
 }
 
 export default async function OpeningTimes() {
+  const draft = await draftMode();
   const openingHours: any = await fetchContent(
-    { preview: draftMode().isEnabled },
+    { preview: draft.isEnabled },
     "openingTimes",
     parseContentfulOpeningHours
   );

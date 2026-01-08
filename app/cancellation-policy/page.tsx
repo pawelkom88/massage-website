@@ -4,8 +4,9 @@ import { draftMode } from "next/headers";
 import { fetchContent, parseContentfulPolicy } from "@/contentful/fetchContent";
 
 const Policy = async () => {
+  const draft = await draftMode();
   const policy: any = await fetchContent(
-    { preview: draftMode().isEnabled },
+    { preview: draft.isEnabled },
     "policy",
     parseContentfulPolicy
   );

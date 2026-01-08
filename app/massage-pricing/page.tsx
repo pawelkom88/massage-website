@@ -23,14 +23,15 @@ export const metadata: Metadata = {
 const tableBorder = "border px-4 py-2";
 
 export default async function Prices() {
+  const draft = await draftMode();
   const prices: any = await fetchContent(
-    { preview: draftMode().isEnabled },
+    { preview: draft.isEnabled },
     "prices",
     parseContentfulPrices
   );
 
   const openingHours: any = await fetchContent(
-    { preview: draftMode().isEnabled },
+    { preview: draft.isEnabled },
     "openingTimes",
     parseContentfulOpeningHours
   );

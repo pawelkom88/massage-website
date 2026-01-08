@@ -1,6 +1,5 @@
 import { fetchArticle, fetchContent, parseContentfulTreatmentNotes } from "@/contentful/fetchContent";
 import MassageTreatment from "@/components/massage-treatment/Treatment";
-import { Metadata } from "next";
 import { draftMode } from "next/headers";
 
 function convertString(string: string) {
@@ -13,7 +12,7 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export const generateMetadata = async ({ params }: Props): Metadata => {
+export const generateMetadata = async ({ params }: Props) => {
   const { slug } = await params;
   const title = `${convertString(slug)}`;
 

@@ -4,7 +4,6 @@ import { BLOCKS } from "@contentful/rich-text-types";
 import { options } from "@/contentful/helpers";
 import Image from "next/image";
 
-// Custom options for treatment notes - renders paragraphs as small text
 const notesOptions = {
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node: any, children: React.ReactNode) => (
@@ -82,40 +81,38 @@ function MassageTreatment({ article, treatmentNotes }: MassageTreatmentProps) {
         <a className="text-primary-clr" href="tel:07525431743">
           07525431743
         </a>
-        <br />
-        {images?.length ? (
-          <div className="max-w-full grid lg:grid-cols-[repeat(auto-fill,minmax(250px,1fr))] lg:grid-rows-[250px] lg:grid-flow-row-dense gap-3 my-12">
-            {images.map(image => {
-              return (
-                <Image
-                  key={image?.src}
-                  src={image?.src}
-                  width={image?.width}
-                  height={image?.height}
-                  alt={image?.alt}
-                />
-              );
-            })}
-          </div>
-        ) : null}
-        <br />
-        <div className="flex flex-col">
-          {treatmentNotes?.notes ? (
-            documentToReactComponents(treatmentNotes.notes, notesOptions)
-          ) : (
-            <>
-              <small>* Gift vouchers available</small>
-              <small>
-                * There is a 48hour cancellation policy - 48hours notice for appointment adjustments or
-                cancellations. Same day cancellations will be charged 50% of the price. No show is
-                charged full price.
-              </small>
-              <small>* I supply official receipts for a Health Shield Claim</small>
-              <small>* Cardiff University staff discount - £5 off your first 60min appointment.</small>
-            </>
-          )}
-        </div>
       </p>
+      {images?.length ? (
+        <div className="max-w-full grid lg:grid-cols-[repeat(auto-fill,minmax(250px,1fr))] lg:grid-rows-[250px] lg:grid-flow-row-dense gap-3 my-12">
+          {images.map(image => {
+            return (
+              <Image
+                key={image?.src}
+                src={image?.src}
+                width={image?.width}
+                height={image?.height}
+                alt={image?.alt}
+              />
+            );
+          })}
+        </div>
+      ) : null}
+      <div className="flex flex-col">
+        {treatmentNotes?.notes ? (
+          documentToReactComponents(treatmentNotes.notes, notesOptions)
+        ) : (
+          <>
+            <small>* Gift vouchers available</small>
+            <small>
+              * There is a 48hour cancellation policy - 48hours notice for appointment adjustments or
+              cancellations. Same day cancellations will be charged 50% of the price. No show is
+              charged full price.
+            </small>
+            <small>* I supply official receipts for a Health Shield Claim</small>
+            <small>* Cardiff University staff discount - £5 off your first 60min appointment.</small>
+          </>
+        )}
+      </div>
     </section>
   );
 }

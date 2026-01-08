@@ -5,7 +5,6 @@ import "@fontsource/dm-sans";
 import Navigation from "@/components/navigation/Navigation";
 import Footer from "@/components/footer/Footer";
 import MobileNavigation from "@/components/navigation/MobileNavigation";
-import DraftModeBanner from "@/components/draft/DraftModeBanner";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -47,7 +46,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Navigation />
         <MobileNavigation />
-        <DraftModeBanner />
         {children}
         {/* @ts-expect-error Server Component */}
         <Footer />
