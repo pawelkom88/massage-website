@@ -26,8 +26,8 @@ export default async function Footer() {
                 className="block font-medium  hover:text-primary-clr">
                 info@healthymuscles.co.uk
               </a>
-              <br />
-              <SocialMedia />
+              {/*<br />*/}
+              {/*<SocialMedia />*/}
             </div>
             {/* @ts-expect-error Server Component */}
             <OpeningTimes />

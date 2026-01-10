@@ -109,7 +109,11 @@ function MassageTreatment({ article, treatmentNotes }: MassageTreatmentProps) {
       ) : null}
 
       <div className="flex flex-col max-w-readable mx-auto mb-8 text-left">
-        {treatmentNotes?.notes && typeof treatmentNotes.notes === 'object' && treatmentNotes.notes.content ? (
+        {treatmentNotes?.notes && Array.isArray(treatmentNotes.notes) && treatmentNotes.notes.length > 0 ? (
+          treatmentNotes.notes.map((note, index) => (
+            <small key={index} className="text-left block">{note}</small>
+          ))
+        ) : treatmentNotes?.notes?.content ? (
           documentToReactComponents(treatmentNotes.notes, notesOptions)
         ) : (
           <>
